@@ -8,5 +8,3 @@ Build und verwendet die eine entsprechende Verzeichnisstruktur.
 Das Projekt kann einfach kopiert und umbenannt werden. In den meisten 
 IDE's kann es direkt geöffnet werden, sofern diese in der Lage sind 
 Maven-POMs (pom.xml) zu interpretieren.
-
-Stand: OOP-16HS 
