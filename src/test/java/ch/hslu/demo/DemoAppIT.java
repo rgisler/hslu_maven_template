@@ -1,12 +1,11 @@
 /*
- * Copyright 2016 Roland Gisler
- * Hochschule Luzern Informatik, Switzerland
+ * Copyright 2016 Hochschule Luzern Informatik.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,22 +15,23 @@
  */
 package ch.hslu.demo;
 
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
  * Beispiel für Integrationstests.
- * Namenskonvention 'IT' am Schluss. Werden mit dem Target
+ * Namenskonvention 'IT' am Schluss. Werden mit dem Goal
  * integration-test ausgeführt.
  */
-public class GeometrieIT {
+public class DemoAppIT {
 
-   /**
-    * Demo-Test für Parameterübergabe an Testfall.
-    * Sinnvoll für Interaktion mit Dateisystem.
-    */
-   @Test
-   public final void testTestParameter() {
-       System.out.println("Working directory of integration testcase: '" + System.getProperty("proj.basedir") + "'");
-       DemoApp.main(new String[0]);
-   }
+    /**
+     * Demo-Test für Parameterübergabe an Testfall.
+     * Sinnvoll für Interaktion mit Dateisystem.
+     */
+    @Test
+    public final void testTestParameter() {
+        DemoApp.main(new String[0]);
+        assertTrue(true); // FAKE Test, nur für Demo!
+    }
 }
