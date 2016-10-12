@@ -8,7 +8,9 @@
    <packaging>jar</packaging>
 
    <name>oop_maven_template</name>
-   <description>Leeres Template für Java-Projekt mit Maven (single module).</description>
+   <description>
+       Projekt-Template für Java-Projekte des Moduls OOP. Details siehe unter Beschreibung.
+   </description>
    <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_samples-develop/site/</url>
 
    <prerequisites>
@@ -75,7 +77,7 @@
       <surefirePlugin.version>2.19.1</surefirePlugin.version>
       <findbugsPlugin.version>3.0.4</findbugsPlugin.version>
 
-      <log4j2.version>2.6.2</log4j2.version>
+      <log4j2.version>2.7</log4j2.version>
    </properties>
 
    <dependencyManagement>
@@ -114,6 +116,12 @@
             <version>2.1.6</version>
             <scope>test</scope>
          </dependency>
+         <dependency>
+            <groupId>org.mutabilitydetector</groupId>
+            <artifactId>MutabilityDetector</artifactId>
+            <version>0.9.5</version>
+            <scope>test</scope>
+         </dependency>
       </dependencies>
    </dependencyManagement>
 
@@ -141,6 +149,10 @@
          <groupId>nl.jqno.equalsverifier</groupId>
          <artifactId>equalsverifier</artifactId>
          <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.mutabilitydetector</groupId>
+         <artifactId>MutabilityDetector</artifactId>
       </dependency>
    </dependencies>
 
