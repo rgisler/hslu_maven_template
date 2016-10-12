@@ -20,7 +20,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Demo-Applikation für Geometrie-Klasse.
+ * Demo-Applikation für {@link ch.hslu.demo.Point}-Klasse.
  */
 public final class DemoApp {
 
@@ -33,7 +33,7 @@ public final class DemoApp {
     private static final int COR_Y = -1;
 
     /**
-     * Privater Konstruktor, Klasse enthält nur main-Methode.
+     * Privater Konstruktor.
      */
     private DemoApp() {
     }
@@ -43,7 +43,8 @@ public final class DemoApp {
      * @param args Startargumente.
      */
     public static void main(final String[] args) {
-        final int quadrant = Geometrie.getQuadrant(COR_X, COR_Y);
-        LOGGER.info("Punkt (" + COR_X + "," + COR_Y + ") befindet sich in Quadrant: " + quadrant);
+        final Point point = new Point(COR_X, COR_Y);
+        final int quadrant = point.getQuadrant();
+        LOGGER.info(point.toString() + " befindet sich in Quadrant: " + quadrant);
     }
 }
