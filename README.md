@@ -18,8 +18,14 @@ Sobald Sie eigene Klassen und Testfälle ergänzt haben können/sollten
 Sie die enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
-Logging Framework - http://logging.apache.org/log4j/2.x/
-JUnit - http://junit.org/junit4/
-Hamcrest - http://hamcrest.org/JavaHamcrest/
-EqualsVerifier - http://jqno.nl/equalsverifier/
-MutabilityDetector - http://mutabilitydetector.org/
+* Logging Framework - http://logging.apache.org/log4j/2.x/
+* JUnit - http://junit.org/junit4/
+* Hamcrest - http://hamcrest.org/JavaHamcrest/
+* EqualsVerifier - http://jqno.nl/equalsverifier/
+* MutabilityDetector - http://mutabilitydetector.org/
+
+## Integrierte Analysewerkzeuge
+* Checkstyle - http://checkstyle.sourceforge.net/
+* Findbugs - http://findbugs.sourceforge.net/
+* PMD - https://pmd.github.io/
+* JaCoCo - http://www.eclemma.org/jacoco/
