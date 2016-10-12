@@ -8,7 +8,9 @@
    <packaging>jar</packaging>
 
    <name>oop_maven_template</name>
-   <description>Leeres Template für Java-Projekt mit Maven (single module).</description>
+   <description>
+       Projekt-Template für Java-Projekte des Moduls OOP. Details siehe unter Beschreibung.
+   </description>
    <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_samples-develop/site/</url>
 
    <prerequisites>

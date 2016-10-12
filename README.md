@@ -1,4 +1,4 @@
-﻿# Java Projekt-Template für OOP
+# Java Projekt-Template für OOP
 
 ## Zweck
 Dieses Projekt dient im Modul OOP als Template für einfache Java-Projekte.
