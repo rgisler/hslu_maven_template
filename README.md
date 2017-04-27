@@ -1,5 +1,7 @@
 # Java Projekt-Template für OOP
 
+[![build status](https://gitlab.enterpriselab.ch/oop/oop_maven_template/badges/develop/build.svg)](https://gitlab.enterpriselab.ch/oop/oop_maven_template/commits/develop)
+
 ## Zweck
 Dieses Projekt dient im Modul OOP als Template für einfache Java-Projekte.
 Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhängigen) 
