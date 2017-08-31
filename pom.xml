@@ -293,6 +293,9 @@
                 <configuration>
                     <source>${project.build.targetJdk}</source>
                     <target>${project.build.targetJdk}</target>
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
