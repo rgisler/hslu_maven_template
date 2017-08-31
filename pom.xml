@@ -60,6 +60,9 @@
     </ciManagement>
 
     <properties>
+        <!-- VM-Args (z.B. Memory-Settings) für Unit- und Integrationstests. -->
+        <argLine>-Xms512m -Xmx1g -Xss10m</argLine>
+
         <group.id>oop</group.id>
         <developer.id>zbgisler</developer.id>
 
