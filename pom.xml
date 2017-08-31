@@ -83,6 +83,7 @@
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
         <surefirePlugin.version>2.20</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
+        <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
         <findbugsPlugin.version>3.0.5</findbugsPlugin.version>
 
         <log4j2.version>2.9.0</log4j2.version>
@@ -204,8 +205,13 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>1.4.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.20</version>
+                    <version>${failsafePlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
