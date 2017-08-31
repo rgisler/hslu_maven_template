@@ -73,11 +73,11 @@
         <jacocoPlugin.version>0.7.9</jacocoPlugin.version>
         <javadocPlugin.version>2.10.4</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.7</pmdPlugin.version>
+        <pmdPlugin.version>3.8</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
         <surefirePlugin.version>2.20</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
-        <findbugsPlugin.version>3.0.4</findbugsPlugin.version>
+        <findbugsPlugin.version>3.0.5</findbugsPlugin.version>
 
         <log4j2.version>2.9.0</log4j2.version>
     </properties>
@@ -169,7 +169,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -189,12 +189,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.6.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.0.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -488,7 +488,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.4</version>
                 <reportSets>
                     <reportSet>
                         <reports>
