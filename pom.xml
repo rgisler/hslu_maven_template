@@ -13,15 +13,16 @@
     </description>
     <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_samples-develop/site/</url>
 
-    <!-- TODO: Für Maven 3.5 zu entfernen, wenn versions-Plugin bereit -->
-    <prerequisites>
-        <maven>3.0.1</maven>
-    </prerequisites>
-
     <organization>
         <name>Hochschule Luzern - Informatik</name>
         <url>http://www.hslu.ch/informatik/</url>
     </organization>
+
+    <!-- TODO: Für Maven 3.5 zu entfernen, wenn versions-Plugin bereit
+    <prerequisites>
+        <maven>3.0.1</maven>
+    </prerequisites>
+    -->
 
     <licenses>
         <license>
@@ -60,26 +61,34 @@
     </ciManagement>
 
     <properties>
+        <!-- VM-Args (z.B. Memory-Settings) für Unit- und Integrationstests. -->
+        <argLine>-Xms512m -Xmx1g -Xss10m</argLine>
+
+        <!-- Hier ggf. andere Startklasse anpassen! -->
+        <jar.start.class>ch.hslu.demo.DemoApp</jar.start.class>
+
         <group.id>oop</group.id>
         <developer.id>zbgisler</developer.id>
 
         <project.build.targetJdk>1.8</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+        <project.maven.version>3.0.5</project.maven.version>
 
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <checkstylePlugin.version>2.17</checkstylePlugin.version>
         <jacocoPlugin.version>0.7.9</jacocoPlugin.version>
-        <javadocPlugin.version>2.10.4</javadocPlugin.version>
+        <javadocPlugin.version>3.0.0-M1</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.7</pmdPlugin.version>
+        <pmdPlugin.version>3.8</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
         <surefirePlugin.version>2.20</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
-        <findbugsPlugin.version>3.0.4</findbugsPlugin.version>
+        <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
+        <findbugsPlugin.version>3.0.5</findbugsPlugin.version>
 
-        <log4j2.version>2.8.2</log4j2.version>
+        <log4j2.version>2.9.0</log4j2.version>
     </properties>
 
     <dependencyManagement>
@@ -118,7 +127,7 @@
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>2.2.2</version>
+                <version>2.3.3</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -169,7 +178,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -189,17 +198,22 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.7.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.0.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>3.0.0-M1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.20</version>
+                    <version>${failsafePlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -280,6 +294,9 @@
                 <configuration>
                     <source>${project.build.targetJdk}</source>
                     <target>${project.build.targetJdk}</target>
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
@@ -303,11 +320,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
             </plugin>
-            <!-- TODO: Für Maven 3.5 vorbereitet -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.4.1</version>
                 <executions>
                     <execution>
                         <id>enforce-maven</id>
@@ -317,9 +332,9 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>3.0.5</version>
+                                    <version>${project.maven.version}</version>
                                 </requireMavenVersion>
-                            </rules>    
+                            </rules>
                         </configuration>
                     </execution>
                 </executions>
@@ -348,6 +363,7 @@
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            <mainClass>${jar.start.class}</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -426,6 +442,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changes-plugin</artifactId>
                 <version>${mavenChangesPlugin.version}</version>
+                <configuration>
+                    <xmlPath>${basedir}/src/site/changes.xml</xmlPath>
+                </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -478,7 +497,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>${surefirePlugin.version}</version>
+                <version>${surefireReportPlugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -488,7 +507,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.4</version>
                 <reportSets>
                     <reportSet>
                         <reports>
