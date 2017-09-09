@@ -1,24 +1,25 @@
-# Java Projekt-Template für OOP
+# Java Projekt-Template fuer OOP, PLAB und AD
 
 [![build status](https://gitlab.enterpriselab.ch/oop/oop_maven_template/badges/develop/build.svg)](https://gitlab.enterpriselab.ch/oop/oop_maven_template/commits/develop)
 
 ## Zweck
-Dieses Projekt dient im Modul OOP als Template für einfache Java-Projekte.
-Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhängigen) 
-Build und verwendet die eine entsprechende Verzeichnisstruktur. 
+Dieses Projekt dient in den Modulen OOP, PLAB und AD als Template fuer 
+einfache Java-Projekte.
+Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
+Build und definiert die entsprechende Verzeichnisstruktur. 
 
 ## Verwendung
 Das Projekt kann einfach kopiert und umbenannt werden. In den meisten 
-IDE's kann es direkt geöffnet werden, sofern diese in der Lage sind 
-Maven-POMs (Apache Maven) zu interpretieren.
+IDEs (Eclipse, Netbeans etc.) kann es direkt geoeffnet werden, sofern 
+diese in der Lage sind Maven-POMs zu interpretieren.
 
-Nach dem Kopieren in ein neues Verzeichnis empfehlen wir ihnen, den Namen
-des Verzeichnisses, den Namen des Projektes in der IDE, und die "ArtifactID"
-(ein Element im pom.xml) synchron zu halten. In den meisten IDE's erreichen
-Sie das durch ein einfaches "Rename"-Refactoring, können das aber auch
+Nach dem Kopieren in ein neues Verzeichnis empfehlen wir, den Namen
+des Verzeichnisses, den Namen des Projektes in der IDE und die "ArtifactID"
+(ein Element im pom.xml) synchron zu halten. In den meisten IDEs erreichen
+Sie das durch ein einfaches "Rename"-Refactoring, koennen das aber auch
 "von Hand" erledigen.
 
-Sobald Sie eigene Klassen und Testfälle ergänzt haben sollten Sie die 
+Sobald Sie eigene Klassen und Testfaelle ergaenzt haben, sollten Sie die 
 enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
