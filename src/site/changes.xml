@@ -6,6 +6,14 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
+        <release version="1.4.1" date="2017-10-10" description="Bugfix-Release für OOP 17HS.">
+            <action dev="zbgisler" type="fix">
+                Dependencies und Plugins aktualisiert.
+            </action>
+            <action dev="zbgisler" type="fix">
+                Xlint-Optionen verbessert (Annotation-Warnings unterdrücken).
+            </action>
+        </release>
         <release version="1.4.0" date="2017-09-10" description="Release für OOP und AD 17HS.">
             <action dev="zbgisler" type="add">
                 Dependencies aktualisiert und erweitert.
