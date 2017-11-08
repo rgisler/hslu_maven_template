@@ -25,7 +25,7 @@ enthaltenen Demo-Klassen entfernen.
 ## Enhaltene Libraries (Dependencies)
 * Logging Framework - http://logging.apache.org/log4j/2.x/
 * JUnit - http://junit.org/junit4/
-* Hamcrest - http://hamcrest.org/JavaHamcrest/
+* AssertJ - http://joel-costigliola.github.io/assertj/
 * EqualsVerifier - http://jqno.nl/equalsverifier/
 * MutabilityDetector - http://mutabilitydetector.org/
 

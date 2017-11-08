@@ -15,12 +15,14 @@
  */
 package ch.hslu.demo;
 
-import nl.jqno.equalsverifier.EqualsVerifier;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.mutabilitydetector.unittesting.MutabilityAssert.assertImmutable;
+
+import org.junit.Test;
+
+import nl.jqno.equalsverifier.EqualsVerifier;
 
 /**
  * Testfälle für Point.
@@ -81,7 +83,7 @@ public class PointTest {
      */
     @Test
     public final void testGetQuadrantXAchse() {
-        assertThat(new Point(0, 1).getQuadrant(), equalTo(0));
+        assertThat(new Point(0, 1).getQuadrant()).isEqualTo(0);
     }
 
     /**
@@ -89,7 +91,7 @@ public class PointTest {
      */
     @Test
     public final void testGetQuadrantYAchse() {
-        assertThat(new Point(1, 0).getQuadrant(), equalTo(0));
+        assertThat(new Point(1, 0).getQuadrant()).isEqualTo(0);
     }
 
     /**
@@ -97,7 +99,7 @@ public class PointTest {
      */
     @Test
     public final void testGetQuadrantNullpunkt() {
-        assertThat(new Point(0, 0).getQuadrant(), equalTo(0));
+        assertThat(new Point(0, 0).getQuadrant()).isEqualTo(0);
     }
 
     /**
@@ -105,7 +107,7 @@ public class PointTest {
      */
     @Test
     public void testToString() {
-        assertThat(new Point(3, 3).toString().length(), greaterThan(10));
+        assertThat(new Point(3, 3).toString()).containsSequence("Point[");
     }
 
     /**
