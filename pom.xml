@@ -74,9 +74,9 @@
 
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
-        <checkstylePlugin.version>2.17</checkstylePlugin.version>
-        <jacocoPlugin.version>0.7.9</jacocoPlugin.version>
-        <javadocPlugin.version>3.0.0-M1</javadocPlugin.version>
+        <checkstylePlugin.version>3.0.0</checkstylePlugin.version>
+        <jacocoPlugin.version>0.8.0</jacocoPlugin.version>
+        <javadocPlugin.version>3.0.0</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
         <pmdPlugin.version>3.8</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
@@ -262,7 +262,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.6</version>
+                    <version>3.7</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -474,8 +474,12 @@
                 <version>${checkstylePlugin.version}</version>
                 <configuration>
                     <configLocation>${checkstyle.config.location}</configLocation>
-                    <testSourceDirectory>true</testSourceDirectory>
-                </configuration>
+                    <sourceDirectories>
+						<directory>${project.basedir}/src/main/java</directory>
+                    </sourceDirectories>
+                    <testSourceDirectories>
+                        <directory>${project.basedir}/src/test/java</directory>
+                    </testSourceDirectories>                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
