@@ -37,6 +37,10 @@
         </developer>
     </developers>
 
+    <prerequisites>
+        <maven>3.0.5</maven>
+    </prerequisites>
+
     <scm>
         <connection>scm:git:https://${developer.id}@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</connection>
         <developerConnection>scm:git:ssh://git@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</developerConnection>
@@ -78,13 +82,14 @@
         <jacocoPlugin.version>0.8.0</jacocoPlugin.version>
         <javadocPlugin.version>3.0.0</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.8</pmdPlugin.version>
+        <pmdPlugin.version>3.9.0</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
         <surefirePlugin.version>2.20.1</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
         <findbugsPlugin.version>3.0.5</findbugsPlugin.version>
 
+        <!-- HINT: https://gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
         <log4j2.version>2.9.1</log4j2.version>
     </properties>
 
@@ -195,7 +200,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.7</version>
+                            <version>8.8</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -436,7 +441,9 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <includeTests>true</includeTests>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
+                    <analysisCache>true</analysisCache>
                     <rulesets>
                         <ruleset>${pmd.config.location}</ruleset>
                     </rulesets>
@@ -480,7 +487,7 @@
                 <configuration>
                     <configLocation>${checkstyle.config.location}</configLocation>
                     <sourceDirectories>
-						<directory>${project.basedir}/src/main/java</directory>
+                        <directory>${project.basedir}/src/main/java</directory>
                     </sourceDirectories>
                     <testSourceDirectories>
                         <directory>${project.basedir}/src/test/java</directory>
@@ -492,7 +499,10 @@
                 <version>${pmdPlugin.version}</version>
                 <configuration>
                     <includeTests>true</includeTests>
+                    <linkXRef>true</linkXRef>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
+                    <analysisCache>true</analysisCache>
                     <rulesets>
                         <ruleset>${pmd.config.location}</ruleset>
                     </rulesets>
