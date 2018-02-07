@@ -458,13 +458,13 @@
         <plugins>
             <!-- TODO: Uncomment only when using a scm
             <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-changelog-plugin</artifactId>
-               <version>${mavenChangelogPlugin.version}</version>
-               <configuration>
-                  <type>range</type>
-                  <range>365</range>
-               </configuration>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-changelog-plugin</artifactId>
+                 <version>${mavenChangelogPlugin.version}</version>
+                 <configuration>
+                     <type>range</type>
+                     <range>365</range>
+                 </configuration>
             </plugin>
             -->
             <plugin>
