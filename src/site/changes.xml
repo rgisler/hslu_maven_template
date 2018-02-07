@@ -1,6 +1,5 @@
-<document xmlns="http://maven.apache.org/changes/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
+<document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
     <properties>
         <title>Changes</title>
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
@@ -12,6 +11,9 @@
             </action>
             <action dev="zbgisler" type="add">
                 Checkstyle und PMD migriert (Konfig von PMD verändert).
+            </action>
+            <action dev="zbgisler" type="add">
+                Neue Version 1.7 von Fluido-Skin.
             </action>
         </release>
         <release version="1.4.1" date="2017-10-10" description="Bugfix-Release für OOP 17HS.">
