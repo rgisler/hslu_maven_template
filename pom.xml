@@ -493,7 +493,8 @@
                     </sourceDirectories>
                     <testSourceDirectories>
                         <directory>${project.basedir}/src/test/java</directory>
-                    </testSourceDirectories>                </configuration>
+                    </testSourceDirectories>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
