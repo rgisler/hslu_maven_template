@@ -115,7 +115,7 @@ public final class Point {
             return false;
         }
         final Point other = (Point) obj;
-        return (this.x == other.x) && (this.y == other.y);
+        return this.x == other.x && this.y == other.y;
     }
 
     /**
