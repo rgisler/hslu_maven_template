@@ -11,7 +11,7 @@
     <description>
         Projekt-Template für Java-Projekte des Moduls OOP. Details siehe unter Beschreibung.
     </description>
-    <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_samples-develop/site/</url>
+    <url>https://jenkins-global.el.eee.intern/jenkins/job/oop_samples-develop/site/</url>
 
     <organization>
         <name>Hochschule Luzern - Informatik</name>
@@ -38,10 +38,10 @@
     </developers>
 
     <!-- Uncomment only temporary for versions-plugin
+    -->
     <prerequisites>
         <maven>3.0.5</maven>
     </prerequisites>
-    -->
 
     <scm>
         <connection>scm:git:https://${developer.id}@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</connection>
@@ -57,7 +57,7 @@
 
     <ciManagement>
         <system>Jenkins auf ELab - HSLU I</system>
-        <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/${project.artifactId}-develop/</url>
+        <url>https://jenkins-global.el.eee.intern/jenkins/job/${project.artifactId}-develop/</url>
     </ciManagement>
 
     <properties>
@@ -569,7 +569,7 @@
         <site>
             <id>oop_maven_template</id>
             <name>oop_maven_template</name>
-            <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_maven_template-develop/site/</url>
+            <url>https://jenkins-global.el.eee.intern/jenkins/job/oop_maven_template-develop/site/</url>
         </site>
     </distributionManagement>
 </project>

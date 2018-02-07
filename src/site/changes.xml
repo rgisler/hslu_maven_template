@@ -6,12 +6,12 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
-        <release version="1.5.0" date="2018-02-01" description="Release für OOP und AD 18FS.">
+        <release version="1.5.0" date="2018-02-07" description="Release für OOP und AD 18FS.">
             <action dev="zbgisler" type="add">
                 Dependencies und Plugins aktualisiert.
             </action>
             <action dev="zbgisler" type="add">
-                Checkstyle und PMD migriert.
+                Checkstyle und PMD migriert (Konfig von PMD verändert).
             </action>
         </release>
         <release version="1.4.1" date="2017-10-10" description="Bugfix-Release für OOP 17HS.">
