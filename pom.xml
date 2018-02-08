@@ -11,18 +11,12 @@
     <description>
         Projekt-Template für Java-Projekte des Moduls OOP. Details siehe unter Beschreibung.
     </description>
-    <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_samples-develop/site/</url>
+    <url>https://jenkins-global.el.eee.intern/jenkins/job/oop_samples-develop/site/</url>
 
     <organization>
         <name>Hochschule Luzern - Informatik</name>
         <url>http://www.hslu.ch/informatik/</url>
     </organization>
-
-    <!-- TODO: Für Maven 3.5 zu entfernen, wenn versions-Plugin bereit
-    <prerequisites>
-        <maven>3.0.1</maven>
-    </prerequisites>
-    -->
 
     <licenses>
         <license>
@@ -43,6 +37,12 @@
         </developer>
     </developers>
 
+    <!-- Uncomment only temporary for versions-plugin
+    <prerequisites>
+        <maven>3.0.5</maven>
+    </prerequisites>
+    -->
+
     <scm>
         <connection>scm:git:https://${developer.id}@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</connection>
         <developerConnection>scm:git:ssh://git@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</developerConnection>
@@ -57,7 +57,7 @@
 
     <ciManagement>
         <system>Jenkins auf ELab - HSLU I</system>
-        <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/${project.artifactId}-develop/</url>
+        <url>https://jenkins-global.el.eee.intern/jenkins/job/${project.artifactId}-develop/</url>
     </ciManagement>
 
     <properties>
@@ -75,19 +75,23 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <project.maven.version>3.0.5</project.maven.version>
 
+        <checkstyle.config.location>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config.location>
+        <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
+
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
-        <checkstylePlugin.version>2.17</checkstylePlugin.version>
-        <jacocoPlugin.version>0.7.9</jacocoPlugin.version>
-        <javadocPlugin.version>3.0.0-M1</javadocPlugin.version>
+        <checkstylePlugin.version>3.0.0</checkstylePlugin.version>
+        <jacocoPlugin.version>0.8.0</jacocoPlugin.version>
+        <javadocPlugin.version>3.0.0</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.8</pmdPlugin.version>
+        <pmdPlugin.version>3.9.0</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
         <surefirePlugin.version>2.20.1</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
         <findbugsPlugin.version>3.0.5</findbugsPlugin.version>
 
+        <!-- HINT: https://gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
         <log4j2.version>2.9.1</log4j2.version>
     </properties>
 
@@ -119,15 +123,15 @@
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.hamcrest</groupId>
-                <artifactId>hamcrest-all</artifactId>
-                <version>1.3</version>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.9.0</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>2.3.3</version>
+                <version>2.4.3</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -154,8 +158,8 @@
             <artifactId>junit</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
         </dependency>
         <dependency>
             <groupId>nl.jqno.equalsverifier</groupId>
@@ -194,6 +198,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${checkstylePlugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>8.8</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -258,7 +269,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.6</version>
+                    <version>3.7</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -269,6 +280,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${sourcePlugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.5</version>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
@@ -422,20 +438,33 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration>
+                    <includeTests>true</includeTests>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                    <targetJdk>${project.build.targetJdk}</targetJdk>
+                    <analysisCache>true</analysisCache>
+                    <rulesets>
+                        <ruleset>${pmd.config.location}</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
     <reporting>
         <plugins>
-            <!-- TODO: Kann mit Versionskontrollsystem aktiviert werden. 
+            <!-- TODO: Uncomment only when using a scm
             <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-changelog-plugin</artifactId>
-               <version>${mavenChangelogPlugin.version}</version>
-               <configuration>
-                  <type>range</type>
-                  <range>365</range>
-               </configuration>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-changelog-plugin</artifactId>
+                 <version>${mavenChangelogPlugin.version}</version>
+                 <configuration>
+                     <type>range</type>
+                     <range>365</range>
+                 </configuration>
             </plugin>
             -->
             <plugin>
@@ -458,8 +487,13 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${checkstylePlugin.version}</version>
                 <configuration>
-                    <configLocation>${project.basedir}/config/checkstyle/checkstyle.xml</configLocation>
-                    <testSourceDirectory>true</testSourceDirectory>
+                    <configLocation>${checkstyle.config.location}</configLocation>
+                    <sourceDirectories>
+                        <directory>${project.basedir}/src/main/java</directory>
+                    </sourceDirectories>
+                    <testSourceDirectories>
+                        <directory>${project.basedir}/src/test/java</directory>
+                    </testSourceDirectories>
                 </configuration>
             </plugin>
             <plugin>
@@ -468,9 +502,12 @@
                 <version>${pmdPlugin.version}</version>
                 <configuration>
                     <includeTests>true</includeTests>
+                    <linkXRef>true</linkXRef>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
+                    <analysisCache>true</analysisCache>
                     <rulesets>
-                        <ruleset>${project.basedir}/config/pmd/pmd_hslu.xml</ruleset>
+                        <ruleset>${pmd.config.location}</ruleset>
                     </rulesets>
                 </configuration>
             </plugin>
@@ -533,7 +570,7 @@
         <site>
             <id>oop_maven_template</id>
             <name>oop_maven_template</name>
-            <url>https://jenkins-global.el.eee.intern/jenkins/view/OOP/job/oop_maven_template-develop/site/</url>
+            <url>https://jenkins-global.el.eee.intern/jenkins/job/oop_maven_template-develop/site/</url>
         </site>
     </distributionManagement>
 </project>
