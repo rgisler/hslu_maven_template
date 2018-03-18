@@ -39,7 +39,7 @@
 
     <!-- Uncomment only temporary for versions-plugin
     <prerequisites>
-        <maven>3.0.5</maven>
+        <maven>3.1.1</maven>
     </prerequisites>
     -->
 
@@ -73,7 +73,7 @@
         <project.build.targetJdk>1.8</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <project.maven.version>3.0.5</project.maven.version>
+        <project.maven.version>3.1.1</project.maven.version>
 
         <checkstyle.config.location>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config.location>
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
@@ -89,7 +89,7 @@
         <surefirePlugin.version>2.20.1</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
-        <findbugsPlugin.version>3.0.5</findbugsPlugin.version>
+        <spotbugsPlugin.version>3.1.3</spotbugsPlugin.version>
 
         <!-- HINT: https://gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
         <log4j2.version>2.9.1</log4j2.version>
@@ -290,6 +290,11 @@
                     <artifactId>clirr-maven-plugin</artifactId>
                     <version>2.8</version>
                 </plugin>
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${spotbugsPlugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
 
@@ -445,6 +450,14 @@
                     </rulesets>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <configuration>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                </configuration>            
+            </plugin>
         </plugins>
     </build>
 
@@ -550,12 +563,13 @@
                 </reportSets>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>${findbugsPlugin.version}</version>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${spotbugsPlugin.version}</version>
                 <configuration>
                     <effort>Max</effort>
-                </configuration>
+                    <threshold>Low</threshold>
+                </configuration>            
             </plugin>
         </plugins>
     </reporting>
