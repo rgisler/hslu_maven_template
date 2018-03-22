@@ -15,6 +15,8 @@
  */
 package ch.hslu.demo;
 
+import java.util.Objects;
+
 /**
  * Modell eines Punktes im 2D-Raum.
  * Klasse ist Immutable implementiert.
@@ -124,10 +126,7 @@ public final class Point {
      */
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 83 * hash + this.x;
-        hash = 83 * hash + this.y;
-        return hash;
+        return Objects.hash(this.x, this.y);
     }
 
     /**
