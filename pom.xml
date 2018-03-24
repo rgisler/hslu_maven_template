@@ -97,7 +97,7 @@
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <checkstylePlugin.version>3.0.0</checkstylePlugin.version>
-        <jacocoPlugin.version>0.8.0</jacocoPlugin.version>
+        <jacocoPlugin.version>0.8.1</jacocoPlugin.version>
         <javadocPlugin.version>3.0.0</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
         <pmdPlugin.version>3.9.0</pmdPlugin.version>
@@ -141,7 +141,7 @@
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>2.4.4</version>
+                <version>2.4.5</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -335,19 +335,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <!-- HINT: Nur für altes Maven mit Coloring notwendig. -->
-                <dependencies>
-                    <dependency>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>jcl-over-slf4j</artifactId>
-                        <version>1.7.5</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-jdk14</artifactId>
-                        <version>1.7.5</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
