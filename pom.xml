@@ -328,6 +328,8 @@
                     <compilerArgument>-Xlint:all,-processing</compilerArgument>
                     <showDeprecation>true</showDeprecation>
                     <showWarnings>true</showWarnings>
+                    <!-- Issue: MCOPMILER-209 -->
+                    <useIncrementalCompilation>false</useIncrementalCompilation>
                 </configuration>
             </plugin>
             <plugin>
