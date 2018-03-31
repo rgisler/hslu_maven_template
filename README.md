@@ -2,6 +2,9 @@
 
 [![build status](https://gitlab.enterpriselab.ch/oop/oop_maven_template/badges/develop/build.svg)](https://gitlab.enterpriselab.ch/oop/oop_maven_template/commits/develop)
 
+[![Quality Gate](http://docker-2017-zbgisler.el.eee.intern:9000/api/badges/gate?key=ch.hslu:oop_maven_template)](http://docker-2017-zbgisler.el.eee.intern:9000/dashboard?id=ch.hslu%3Aoop_maven_template)
+
+
 ## Zweck
 Dieses Projekt dient in den Modulen OOP, PLAB und AD als Template fuer 
 einfache Java-Projekte.
