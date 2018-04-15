@@ -54,10 +54,10 @@
     </developers>
 
     <!-- Uncomment only temporary for versions-plugin
+    -->
     <prerequisites>
         <maven>3.1.1</maven>
     </prerequisites>
-    -->
 
     <scm>
         <connection>scm:git:https://${developer.id}@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</connection>
@@ -197,7 +197,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -212,7 +212,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.8</version>
+                            <version>8.9</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -224,7 +224,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.1.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -249,7 +249,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.1.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
