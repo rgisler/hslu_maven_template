@@ -6,7 +6,7 @@
 [![Test Success](http://docker-2017-zbgisler.el.eee.intern:9000/api/badges/measure?key=ch.hslu:oop_maven_template&metric=test_success_density)](http://docker-2017-zbgisler.el.eee.intern:9000/component_measures?id=ch.hslu%3Aoop_maven_template&metric=test_success_density)
 
 ## Zweck
-Dieses Projekt dient in den Modulen OOP, PLAB und AD als Template fuer 
+Dieses Projekt dient in den Modulen OOP/PLAB,  und AD als Template fuer 
 einfache Java-Projekte.
 Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
 Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur. 
@@ -34,6 +34,6 @@ für Demozwecke enthaltenen Demo-Klassen entfernen.
 
 ## Integrierte Analysewerkzeuge
 * Checkstyle - http://checkstyle.sourceforge.net/
-* Findbugs - http://findbugs.sourceforge.net/
 * PMD - https://pmd.github.io/
 * JaCoCo - http://www.eclemma.org/jacoco/
+* Spotbugs - https://github.com/spotbugs/
