@@ -43,7 +43,7 @@
 
     <developers>
         <developer>
-            <id>${developer.id}</id>
+            <id>${scm.developer.uid}</id>
             <name>Roland Gisler</name>
             <email>roland.gisler@hslu.ch</email>
             <organization>HSLU Informatik</organization>
@@ -60,15 +60,15 @@
     -->
 
     <scm>
-        <connection>scm:git:https://${developer.id}@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:ssh://git@gitlab.enterpriselab.ch/${group.id}/${project.artifactId}.git</developerConnection>
-        <url>https://gitlab.enterpriselab.ch/${group.id}/${project.artifactId}/tree/develop</url>
+        <connection>scm:git:https://${scm.developer.uid}@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:ssh://git@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</developerConnection>
+        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/tree/develop</url>
         <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
         <system>GitLab auf ELab - HSLU I</system>
-        <url>https://gitlab.enterpriselab.ch/${group.id}/${project.artifactId}/issues</url>
+        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/issues</url>
     </issueManagement>
 
     <ciManagement>
@@ -83,8 +83,8 @@
         <!-- Hier ggf. andere Startklasse anpassen! -->
         <jar.start.class>ch.hslu.demo.DemoApp</jar.start.class>
 
-        <group.id>oop</group.id>
-        <developer.id>zbgisler</developer.id>
+        <scm.group.name>oop</scm.group.name>
+        <scm.developer.uid>zbgisler</scm.developer.uid>
 
         <project.build.targetJdk>1.8</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
