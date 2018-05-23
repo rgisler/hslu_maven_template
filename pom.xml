@@ -220,6 +220,19 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.7.0</version>
+                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/14 -->
+                    <!--
+                    <configuration>
+                        <release>${project.build.targetJdk}</release>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.ow2.asm</groupId>
+                            <artifactId>asm</artifactId>
+                            <version>6.1.1</version>
+                        </dependency>
+                    </dependencies>
+                    -->
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -393,6 +406,8 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <attach>true</attach>
+                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/13 -->>
+                    <!-- <additionalJOption>-html5</additionalJOption> -->
                 </configuration>
                 <executions>
                     <execution>

@@ -150,6 +150,7 @@ public class PointTest {
 
     /**
      * Check Immutability of Point.
+     * Achtung: Mutiability-Detector ist noch nicht Java 10 kompatibel.
      */
     @Test
     public void testImmutability() {
