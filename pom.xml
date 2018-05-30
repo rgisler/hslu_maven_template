@@ -98,7 +98,7 @@
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <checkstylePlugin.version>3.0.0</checkstylePlugin.version>
         <jacocoPlugin.version>0.8.1</jacocoPlugin.version>
-        <javadocPlugin.version>3.0.0</javadocPlugin.version>
+        <javadocPlugin.version>3.0.1</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
         <pmdPlugin.version>3.9.0</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
@@ -106,8 +106,11 @@
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
         <spotbugsPlugin.version>3.1.3.1</spotbugsPlugin.version>
+        
+        <!-- HINT: https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/16 -->
+        <spotbugs.groovy.version>2.4.15</spotbugs.groovy.version>
 
-        <!-- HINT: https://gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
+        <!-- HINT: https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
         <log4j2.version>2.9.1</log4j2.version>
     </properties>
 
@@ -212,7 +215,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.10</version>
+                            <version>8.10.1</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -237,7 +240,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -323,6 +326,13 @@
                     <groupId>com.github.spotbugs</groupId>
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>${spotbugsPlugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy</artifactId>
+                            <version>${spotbugs.groovy.version}</version>
+                        </dependency>
+                    </dependencies>                
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -407,7 +417,7 @@
                 <configuration>
                     <attach>true</attach>
                     <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/13 -->>
-                    <!-- <additionalJOption>-html5</additionalJOption> -->
+                    <additionalJOption>-html5</additionalJOption>
                 </configuration>
                 <executions>
                     <execution>
@@ -477,6 +487,14 @@
                     <effort>Max</effort>
                     <threshold>Low</threshold>
                 </configuration>            
+                <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/16 -->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy</artifactId>
+                        <version>${spotbugs.groovy.version}</version>
+                    </dependency>
+                </dependencies>                
             </plugin>
         </plugins>
     </build>
@@ -552,6 +570,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${javadocPlugin.version}</version>
+                <configuration>
+                    <attach>true</attach>
+                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/13 -->>
+                    <additionalJOption>-html5</additionalJOption>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
