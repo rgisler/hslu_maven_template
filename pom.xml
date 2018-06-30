@@ -54,10 +54,10 @@
     </developers>
 
     <!-- Uncomment only temporary for versions-plugin
-    <prerequisites>
+    -->
+	<prerequisites>
         <maven>3.1.1</maven>
     </prerequisites>
-    -->
 
     <scm>
         <connection>scm:git:https://${scm.developer.uid}@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</connection>
@@ -86,7 +86,7 @@
         <scm.group.name>oop</scm.group.name>
         <scm.developer.uid>zbgisler</scm.developer.uid>
 
-        <project.build.targetJdk>1.8</project.build.targetJdk>
+        <project.build.targetJdk>10</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <project.maven.version>3.1.1</project.maven.version>
@@ -100,15 +100,15 @@
         <jacocoPlugin.version>0.8.1</jacocoPlugin.version>
         <javadocPlugin.version>3.0.1</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.9.0</pmdPlugin.version>
+        <pmdPlugin.version>3.10.0</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
-        <surefirePlugin.version>2.21.0</surefirePlugin.version>
+        <surefirePlugin.version>2.22.0</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
-        <spotbugsPlugin.version>3.1.3.1</spotbugsPlugin.version>
+        <spotbugsPlugin.version>3.1.5</spotbugsPlugin.version>
         
         <!-- HINT: https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/16 -->
-        <spotbugs.groovy.version>2.4.15</spotbugs.groovy.version>
+        <spotbugs.groovy.version>3.0.0-alpha-3</spotbugs.groovy.version>
 
         <!-- HINT: https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
         <log4j2.version>2.9.1</log4j2.version>
@@ -245,7 +245,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0-M2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -572,7 +572,7 @@
                 <version>${javadocPlugin.version}</version>
                 <configuration>
                     <attach>true</attach>
-                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/13 -->>
+                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/13 -->
                     <additionalJOption>-html5</additionalJOption>
                 </configuration>
             </plugin>
