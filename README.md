@@ -6,7 +6,7 @@
 [![Test Success](http://docker-2017-zbgisler.el.eee.intern:9000/api/badges/measure?key=ch.hslu:oop_maven_template&metric=test_success_density)](http://docker-2017-zbgisler.el.eee.intern:9000/component_measures?id=ch.hslu%3Aoop_maven_template&metric=test_success_density)
 
 ## Zweck
-Dieses Projekt dient in den Modulen OOP/PLAB,  und AD als Template fuer 
+Dieses Projekt dient in den Modulen OOP/PLAB, SWE, AD und VSK als Template fuer 
 einfache Java-Projekte.
 Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
 Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur. 
@@ -27,10 +27,10 @@ für Demozwecke enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
 * Logging Framework - http://logging.apache.org/log4j/2.x/
-* JUnit - http://junit.org/junit4/
+* JUnit - http://junit.org/
 * AssertJ - http://joel-costigliola.github.io/assertj/
 * EqualsVerifier - http://jqno.nl/equalsverifier/
-* MutabilityDetector - http://mutabilitydetector.org/
+* MutabilityDetector - http://mutabilitydetector.org/ (offline)
 
 ## Integrierte Analysewerkzeuge
 * Checkstyle - http://checkstyle.sourceforge.net/
