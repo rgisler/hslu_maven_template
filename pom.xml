@@ -105,10 +105,7 @@
         <surefirePlugin.version>2.22.0</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
-        <spotbugsPlugin.version>3.1.5</spotbugsPlugin.version>
-        
-        <!-- HINT: https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/16 -->
-        <spotbugs.groovy.version>3.0.0-alpha-3</spotbugs.groovy.version>
+        <spotbugsPlugin.version>3.1.6</spotbugsPlugin.version>
 
         <!-- HINT: https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/7 -->
         <log4j2.version>2.11.0</log4j2.version>
@@ -161,13 +158,6 @@
                 <version>2.4.8</version>
                 <scope>test</scope>
             </dependency>
-
-            <dependency>
-                <groupId>org.mutabilitydetector</groupId>
-                <artifactId>MutabilityDetector</artifactId>
-                <version>0.10.1</version>
-                <scope>test</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -199,10 +189,6 @@
         <dependency>
             <groupId>nl.jqno.equalsverifier</groupId>
             <artifactId>equalsverifier</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mutabilitydetector</groupId>
-            <artifactId>MutabilityDetector</artifactId>
         </dependency>
     </dependencies>
 
@@ -244,18 +230,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.7.0</version>
-                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/14 -->
+                    <version>3.8.0</version>
                     <configuration>
                         <release>${project.build.targetJdk}</release>
                     </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.ow2.asm</groupId>
-                            <artifactId>asm</artifactId>
-                            <version>6.2</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -346,13 +324,6 @@
                     <groupId>com.github.spotbugs</groupId>
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>${spotbugsPlugin.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.codehaus.groovy</groupId>
-                            <artifactId>groovy</artifactId>
-                            <version>${spotbugs.groovy.version}</version>
-                        </dependency>
-                    </dependencies>                
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -507,14 +478,6 @@
                     <effort>Max</effort>
                     <threshold>Low</threshold>
                 </configuration>            
-                <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/16 -->
-                <dependencies>
-                    <dependency>
-                        <groupId>org.codehaus.groovy</groupId>
-                        <artifactId>groovy</artifactId>
-                        <version>${spotbugs.groovy.version}</version>
-                    </dependency>
-                </dependencies>                
             </plugin>
         </plugins>
     </build>
@@ -592,7 +555,6 @@
                 <version>${javadocPlugin.version}</version>
                 <configuration>
                     <attach>true</attach>
-                    <!-- https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/13 -->
                     <additionalJOption>-html5</additionalJOption>
                 </configuration>
             </plugin>
