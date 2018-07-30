@@ -7,8 +7,7 @@
 
 ## Zweck
 Dieses Projekt dient in den Modulen OOP/PLAB, SWE, AD und VSK als Template fuer 
-einfache Java-Projekte.
-Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
+einfache Java-Projekte. Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
 Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur. 
 
 ## Verwendung
@@ -30,7 +29,7 @@ für Demozwecke enthaltenen Demo-Klassen entfernen.
 * JUnit - http://junit.org/
 * AssertJ - http://joel-costigliola.github.io/assertj/
 * EqualsVerifier - http://jqno.nl/equalsverifier/
-* MutabilityDetector - http://mutabilitydetector.org/ (offline)
+* MutabilityDetector - http://mutabilitydetector.org/ (nur für Version 1.x, Java 8)
 
 ## Integrierte Analysewerkzeuge
 * Checkstyle - http://checkstyle.sourceforge.net/
