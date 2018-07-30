@@ -15,13 +15,11 @@
  */
 package ch.hslu.demo;
 
-import static org.mutabilitydetector.unittesting.MutabilityAssert.assertImmutable;
-
 import static org.assertj.core.api.Assertions.assertThat;
-
-import nl.jqno.equalsverifier.EqualsVerifier;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import nl.jqno.equalsverifier.EqualsVerifier;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -147,14 +145,5 @@ public class PointTest {
         final Point point1 = new Point(1, 2);
         final Point point2 = new Point(2, 1);
         assertNotEquals(point1, point2);
-    }
-
-    /**
-     * Check Immutability of Point. Achtung: Mutiability-Detector ist noch nicht Java 10 kompatibel.
-     */
-    @Test
-    @Disabled("https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/issues/17")
-    public void testImmutability() {
-        assertImmutable(Point.class);
     }
 }
