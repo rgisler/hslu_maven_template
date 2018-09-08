@@ -26,10 +26,10 @@ für Demozwecke enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
 * Logging Framework - http://logging.apache.org/log4j/2.x/
-* JUnit - http://junit.org/
+* JUnit - https://junit.org/junit5/
+* JUnit Pioneer - https://junit-pioneer.org/
 * AssertJ - http://joel-costigliola.github.io/assertj/
 * EqualsVerifier - http://jqno.nl/equalsverifier/
-* MutabilityDetector - http://mutabilitydetector.org/ (nur für Version 1.x, Java 8)
 
 ## Integrierte Analysewerkzeuge
 * Checkstyle - http://checkstyle.sourceforge.net/
