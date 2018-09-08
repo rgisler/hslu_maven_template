@@ -1,4 +1,24 @@
-image: maven:3-jdk-8
+image: maven:3.5.4-jdk-10
 
-build:  
-  script: "mvn clean install -B"
+variables:
+  MAVEN_CLI_OPTS: "-s .mvn/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+stages:
+  - build
+  - site
+
+build:
+  stage: build
+  script:
+    - mvn $MAVEN_CLI_OPTS clean install
+
+site:
+  stage: site
+  script:
+    - mvn $MAVEN_CLI_OPTS site
