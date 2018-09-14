@@ -5,6 +5,19 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
+        <release version="1.5.2" date="2018-09-14" description="Release für AD und VSK 18HS.">
+            <action dev="zbgisler" type="add">
+                Dependencies und Plugins aktualisiert.
+            </action>
+            <action dev="zbgisler" type="add">
+                Maven Config und settings.xml ergänzt.
+            </action>
+        </release>
+        <release version="1.5.1" date="2018-02-10" description="Release für OOP und AD 18FS (Bugfix).">
+            <action dev="zbgisler" type="add">
+                Dependencies und Plugins aktualisiert.
+            </action>
+        </release>
         <release version="1.5.0" date="2018-02-07" description="Release für OOP und AD 18FS.">
             <action dev="zbgisler" type="add">
                 Dependencies und Plugins aktualisiert.
