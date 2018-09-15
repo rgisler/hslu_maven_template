@@ -12,8 +12,8 @@ Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur.
 Das Projekt kann einfach kopiert und umbenannt werden. In den meisten 
 IDEs (Eclipse, Netbeans etc.) kann es direkt geoeffnet werden, sofern 
 diese in der Lage sind Maven-POMs zu interpretieren.
-_ACHTUNG_: Nur bis Java 1.8 verwendbar! Für neuere Java Versionen nutzen 
-Sie bitte ein Template auf Basis von 2.x.
+**ACHTUNG**: Nur bis Java 1.8 verwendbar! Fuer neuere Java Versionen nutzen 
+Sie bitte ein Template auf Basis von Version 2.x.
 
 Nach dem Kopieren in ein neues Verzeichnis empfehlen wir, den Namen
 des Verzeichnisses, den Namen des Projektes in der IDE und die "ArtifactID"
@@ -22,7 +22,7 @@ Sie das durch ein einfaches "Rename"-Refactoring, koennen das aber auch
 "von Hand" erledigen.
 
 Sobald Sie eigene Klassen und Testfaelle ergaenzt haben, sollten Sie die 
-für Demozwecke enthaltenen Demo-Klassen entfernen.
+fuer Demozwecke enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
 * Logging Framework - http://logging.apache.org/log4j/2.x/
