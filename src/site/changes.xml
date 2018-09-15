@@ -21,6 +21,23 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
+        <release version="2.0.0" date="2018-09-15" description="Release für OOP/PLAB im 18HS.">
+            <action dev="zbgisler" type="add">
+                Dependencies und Plugins aktualisiert.
+            </action>
+            <action dev="zbgisler" type="add">
+                Migration auf SpotBugs (Ersatz für Findbugs).
+            </action>
+            <action dev="zbgisler" type="add">
+                Migration auf JUnit 5 (Jupiter) und JUnit Pioneer.
+            </action>
+            <action dev="zbgisler" type="add">
+                Migration auf Java 10.
+            </action>
+            <action dev="zbgisler" type="remove">
+                MutabilityDetector entfernt (nicht Java 10 kompatibel).
+            </action>
+        </release>
         <release version="1.5.0" date="2018-02-07" description="Release für OOP und AD 18FS.">
             <action dev="zbgisler" type="add">
                 Dependencies und Plugins aktualisiert.

@@ -6,14 +6,16 @@
 [![Test Success](http://docker-2017-zbgisler.el.eee.intern:9000/api/badges/measure?key=ch.hslu:oop_maven_template&metric=test_success_density)](http://docker-2017-zbgisler.el.eee.intern:9000/component_measures?id=ch.hslu%3Aoop_maven_template&metric=test_success_density)
 
 ## Zweck
-Dieses Projekt dient in den Modulen OOP/PLAB, SWE, AD und VSK als Template fuer 
+Dieses Projekt dient in den Modulen OOP/PLAB, AD, SWE, VSK und APPE als Template fuer 
 einfache Java-Projekte. Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
 Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur. 
 
 ## Verwendung
 Das Projekt kann einfach kopiert und umbenannt werden. In den meisten 
-IDEs (Eclipse, Netbeans etc.) kann es direkt geoeffnet werden, sofern 
+IDEs (Eclipse, Netbeans, IntelliJ IDEA etc.) kann es direkt geoeffnet werden, sofern 
 diese in der Lage sind Maven-POMs zu interpretieren.
+**ACHTUNG**: Dieses Template benoetigt mindestens Java 10.0.2! Fuer aeltere Java Versionen nutzen 
+Sie bitte ein Template auf der Basis von Version 1.5.x
 
 Nach dem Kopieren in ein neues Verzeichnis empfehlen wir, den Namen
 des Verzeichnisses, den Namen des Projektes in der IDE und die "ArtifactID"
@@ -22,11 +24,11 @@ Sie das durch ein einfaches "Rename"-Refactoring, koennen das aber auch
 "von Hand" erledigen.
 
 Sobald Sie eigene Klassen und Testfaelle ergaenzt haben, sollten Sie die 
-für Demozwecke enthaltenen Demo-Klassen entfernen.
+fuer Demozwecke enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
 * Logging Framework - http://logging.apache.org/log4j/2.x/
-* JUnit - https://junit.org/junit5/
+* JUnit 5 - https://junit.org/junit5/
 * JUnit Pioneer - https://junit-pioneer.org/
 * AssertJ - http://joel-costigliola.github.io/assertj/
 * EqualsVerifier - http://jqno.nl/equalsverifier/
