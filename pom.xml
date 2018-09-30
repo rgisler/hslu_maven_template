@@ -159,7 +159,7 @@
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>2.5.2</version>
+                <version>3.0</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -281,7 +281,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jxr-plugin</artifactId>
-                    <version>2.5</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -483,7 +483,7 @@
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
-                </configuration>            
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -600,7 +600,7 @@
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
-                </configuration>            
+                </configuration>
             </plugin>
         </plugins>
     </reporting>
