@@ -19,18 +19,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Beispiel für Integrationstests.
- * Namenskonvention 'IT' am Schluss. Werden mit dem Goal
- * integration-test ausgeführt.
+ * Beispiel für Integrationstests. Namenskonvention 'IT' am Schluss. Werden mit
+ * dem Goal integration-test ausgeführt.
  */
-public class DemoAppIT {
+final class DemoAppIT {
 
     /**
-     * Demo-Test für Parameterübergabe an Testfall.
-     * Sinnvoll für Interaktion mit Dateisystem.
+     * Demo-Test für Parameterübergabe an Testfall. Sinnvoll für Interaktion mit
+     * Dateisystem.
      */
     @Test
-    public final void testTestParameter() {
+    void testTestParameter() {
         DemoApp.main(new String[0]);
         assertTrue(true); // FAKE Test, nur für Demo!
     }
