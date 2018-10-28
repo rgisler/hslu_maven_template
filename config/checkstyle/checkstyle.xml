@@ -107,7 +107,7 @@
       <!-- See http://checkstyle.sf.net/config_blocks.html -->
       <module name="AvoidNestedBlocks" />
       <module name="EmptyBlock" />
-      <!-- <module name="EmptyCatchBlock" />  Läuft mit Maven nicht... -->
+      <module name="EmptyCatchBlock" />
       <module name="LeftCurly" />
       <module name="NeedBraces" />
       <module name="RightCurly" />
