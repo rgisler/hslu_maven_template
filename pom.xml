@@ -100,7 +100,7 @@
         <jacocoPlugin.version>0.8.2</jacocoPlugin.version>
         <javadocPlugin.version>3.0.1</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.10.0</pmdPlugin.version>
+        <pmdPlugin.version>3.11.0</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
         <surefirePlugin.version>2.22.1</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
@@ -153,13 +153,13 @@
             <dependency>
                 <groupId>org.junit-pioneer</groupId>
                 <artifactId>junit-pioneer</artifactId>
-                <version>0.2.2</version>
+                <version>0.3.0</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>3.0</version>
+                <version>3.0.2</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -231,7 +231,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.13</version>
+                            <version>8.14</version>
                         </dependency>
                     </dependencies>
                 </plugin>
