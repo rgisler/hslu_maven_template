@@ -105,7 +105,7 @@
         <surefirePlugin.version>2.22.1</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
-        <spotbugsPlugin.version>3.1.7</spotbugsPlugin.version>
+        <spotbugsPlugin.version>3.1.8</spotbugsPlugin.version>
 
         <log4j2.version>2.11.1</log4j2.version>
     </properties>
