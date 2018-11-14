@@ -1,4 +1,4 @@
-image: maven:3.5.4-jdk-10
+image: maven:3.6.0-jdk-10
 
 variables:
   MAVEN_CLI_OPTS: "-s .mvn/settings.xml --batch-mode"
