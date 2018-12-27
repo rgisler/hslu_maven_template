@@ -80,7 +80,7 @@
         <scm.group.name>oop</scm.group.name>
         <scm.developer.uid>zbgisler</scm.developer.uid>
 
-        <project.build.targetJdk>10</project.build.targetJdk>
+        <project.build.targetJdk>11</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <project.maven.version>3.3.9</project.maven.version>
