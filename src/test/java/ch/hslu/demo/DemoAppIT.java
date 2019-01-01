@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
