@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,13 +28,13 @@ import nl.jqno.equalsverifier.EqualsVerifier;
  * Testfälle für Point.
  */
 @SuppressWarnings("PMD.TooManyMethods")
-public class PointTest {
+final class PointTest {
 
     /**
      * Test of getX method, of class Point.
      */
     @Test
-    public void testGetX() {
+    void testGetX() {
         assertEquals(10, new Point(10, 0).getX());
     }
 
@@ -42,7 +42,7 @@ public class PointTest {
      * Test of getY method, of class Point.
      */
     @Test
-    public void testGetY() {
+    void testGetY() {
         assertEquals(20, new Point(0, 20).getY());
     }
 
@@ -50,7 +50,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrant1() {
+    void testGetQuadrant1() {
         assertEquals(1, new Point(1, 1).getQuadrant());
     }
 
@@ -58,7 +58,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrant2() {
+    void testGetQuadrant2() {
         assertEquals(2, new Point(-1, 1).getQuadrant());
     }
 
@@ -66,7 +66,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrant3() {
+    void testGetQuadrant3() {
         assertEquals(3, new Point(-1, -1).getQuadrant());
     }
 
@@ -74,7 +74,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrant4() {
+    void testGetQuadrant4() {
         assertEquals(4, new Point(1, -1).getQuadrant());
     }
 
@@ -82,7 +82,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrantXAchse() {
+    void testGetQuadrantXAchse() {
         assertThat(new Point(0, 1).getQuadrant()).isEqualTo(0);
     }
 
@@ -90,7 +90,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrantYAchse() {
+    void testGetQuadrantYAchse() {
         assertThat(new Point(1, 0).getQuadrant()).isEqualTo(0);
     }
 
@@ -98,7 +98,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#getQuadrant()}.
      */
     @Test
-    public final void testGetQuadrantNullpunkt() {
+    void testGetQuadrantNullpunkt() {
         assertThat(new Point(0, 0).getQuadrant()).isEqualTo(0);
     }
 
@@ -106,7 +106,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#toString()}.
      */
     @Test
-    public void testToString() {
+    void testToString() {
         assertThat(new Point(3, 3).toString()).containsSequence("Point[");
     }
 
@@ -114,7 +114,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)} Contract.
      */
     @Test
-    public void testEqualsContract() {
+    void testEqualsContract() {
         EqualsVerifier.forClass(Point.class).verify();
     }
 
@@ -122,7 +122,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)}.
      */
     @Test
-    public void testEqualsSame() {
+    void testEqualsSame() {
         final Point point1 = new Point(1, 1);
         final Point point2 = point1;
         assertEquals(point1, point2);
@@ -132,7 +132,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)}.
      */
     @Test
-    public void testEqualsEqual() {
+    void testEqualsEqual() {
         final Point point1 = new Point(1, 1);
         final Point point2 = new Point(1, 1);
         assertEquals(point1, point2);
@@ -142,7 +142,7 @@ public class PointTest {
      * Test {@link ch.hslu.demo.Point#equals(java.lang.Object)}.
      */
     @Test
-    public void testEqualsNotEqual() {
+    void testEqualsNotEqual() {
         final Point point1 = new Point(1, 2);
         final Point point2 = new Point(2, 1);
         assertNotEquals(point1, point2);

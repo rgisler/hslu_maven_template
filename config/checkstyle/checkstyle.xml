@@ -3,7 +3,7 @@
     "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <!--
-   * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland.
+   * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland.
    *
    * Licensed under the Apache License, Version 2.0 (the "License");
    * you may not use this file except in compliance with the License.
@@ -107,7 +107,7 @@
       <!-- See http://checkstyle.sf.net/config_blocks.html -->
       <module name="AvoidNestedBlocks" />
       <module name="EmptyBlock" />
-      <!-- <module name="EmptyCatchBlock" />  Läuft mit Maven nicht... -->
+      <module name="EmptyCatchBlock" />
       <module name="LeftCurly" />
       <module name="NeedBraces" />
       <module name="RightCurly" />

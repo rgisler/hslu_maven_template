@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,12 +53,6 @@
         </developer>
     </developers>
 
-    <!-- Uncomment only temporary for versions-plugin
-    <prerequisites>
-        <maven>3.3.9</maven>
-    </prerequisites>
-    -->
-
     <scm>
         <connection>scm:git:https://${scm.developer.uid}@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</connection>
         <developerConnection>scm:git:ssh://git@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</developerConnection>
@@ -86,7 +80,7 @@
         <scm.group.name>oop</scm.group.name>
         <scm.developer.uid>zbgisler</scm.developer.uid>
 
-        <project.build.targetJdk>10</project.build.targetJdk>
+        <project.build.targetJdk>11</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <project.maven.version>3.3.9</project.maven.version>
@@ -100,12 +94,15 @@
         <jacocoPlugin.version>0.8.2</jacocoPlugin.version>
         <javadocPlugin.version>3.0.1</javadocPlugin.version>
         <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.10.0</pmdPlugin.version>
+        <pmdPlugin.version>3.11.0</pmdPlugin.version>
         <sourcePlugin.version>3.0.1</sourcePlugin.version>
-        <surefirePlugin.version>2.22.0</surefirePlugin.version>
+        <surefirePlugin.version>2.22.1</surefirePlugin.version>
         <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
         <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
-        <spotbugsPlugin.version>3.1.6</spotbugsPlugin.version>
+        <spotbugsPlugin.version>3.1.10</spotbugsPlugin.version>
+        <asciidoctor.maven.plugin.version>1.5.7.1</asciidoctor.maven.plugin.version>
+        <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
+        <asciidoctorj.version>1.6.0</asciidoctorj.version>
 
         <log4j2.version>2.11.1</log4j2.version>
     </properties>
@@ -128,19 +125,19 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
-                <version>5.3.1</version>
+                <version>5.3.2</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.platform</groupId>
                 <artifactId>junit-platform-surefire-provider</artifactId>
-                <version>1.3.1</version>
+                <version>1.3.2</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.3.1</version>
+                <version>5.3.2</version>
                 <scope>runtime</scope>
             </dependency>
 
@@ -153,13 +150,13 @@
             <dependency>
                 <groupId>org.junit-pioneer</groupId>
                 <artifactId>junit-pioneer</artifactId>
-                <version>0.1.2</version>
+                <version>0.3.0</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>2.5.2</version>
+                <version>3.1.4</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -201,6 +198,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>install</defaultGoal>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -211,7 +209,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -231,7 +229,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.12</version>
+                            <version>8.16</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -261,17 +259,17 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
+                    <version>3.0.0-M1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <version>3.0.0-M1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -281,7 +279,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jxr-plugin</artifactId>
-                    <version>2.5</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -314,6 +312,21 @@
                     <version>${sourcePlugin.version}</version>
                 </plugin>
                 <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>1.0.0-rc2</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>${spotbugsPlugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.asciidoctor</groupId>
+                    <artifactId>asciidoctor-maven-plugin</artifactId>
+                    <version>${asciidoctor.maven.plugin.version}</version>
+                </plugin>
+                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
                     <version>2.7</version>
@@ -327,11 +340,6 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>clirr-maven-plugin</artifactId>
                     <version>2.8</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.github.spotbugs</groupId>
-                    <artifactId>spotbugs-maven-plugin</artifactId>
-                    <version>${spotbugsPlugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -356,6 +364,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+                <configuration>
+                    <configLocation>${checkstyle.config.location}</configLocation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <sourceDirectories>
+                        <directory>${project.basedir}/src/main/java</directory>
+                    </sourceDirectories>
+                    <testSourceDirectories>
+                        <directory>${project.basedir}/src/test/java</directory>
+                    </testSourceDirectories>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -383,6 +401,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -413,6 +434,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
+                    <show>package</show>
                     <attach>true</attach>
                     <additionalJOption>-html5</additionalJOption>
                 </configuration>
@@ -451,6 +473,51 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>${asciidoctorj.pdf.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>${asciidoctorj.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <sourceDirectory>src/docs/asciidoc</sourceDirectory>
+                    <attributes>
+                        <sourcedir>${project.build.sourceDirectory}</sourcedir>
+                    </attributes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-pdf-doc</id>
+                        <phase>site</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>pdf</backend>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <attributes>
+                                <icons>font</icons>
+                                <pagenums/>
+                                <toc/>
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -483,7 +550,7 @@
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
-                </configuration>            
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -522,6 +589,7 @@
                 <version>${checkstylePlugin.version}</version>
                 <configuration>
                     <configLocation>${checkstyle.config.location}</configLocation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
                     <sourceDirectories>
                         <directory>${project.basedir}/src/main/java</directory>
                     </sourceDirectories>
@@ -560,6 +628,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${javadocPlugin.version}</version>
                 <configuration>
+                    <show>package</show>
                     <attach>true</attach>
                     <additionalJOption>-html5</additionalJOption>
                 </configuration>
@@ -600,7 +669,7 @@
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
-                </configuration>            
+                </configuration>
             </plugin>
         </plugins>
     </reporting>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,18 +19,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Beispiel für Integrationstests.
- * Namenskonvention 'IT' am Schluss. Werden mit dem Goal
- * integration-test ausgeführt.
+ * Beispiel für Integrationstests. Namenskonvention 'IT' am Schluss. Werden mit
+ * dem Goal integration-test ausgeführt.
  */
-public class DemoAppIT {
+final class DemoAppIT {
 
     /**
-     * Demo-Test für Parameterübergabe an Testfall.
-     * Sinnvoll für Interaktion mit Dateisystem.
+     * Demo-Test für Parameterübergabe an Testfall. Sinnvoll für Interaktion mit
+     * Dateisystem.
      */
     @Test
-    public final void testTestParameter() {
+    void testTestParameter() {
         DemoApp.main(new String[0]);
         assertTrue(true); // FAKE Test, nur für Demo!
     }

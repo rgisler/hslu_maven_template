@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project name="HSLU - appe_stock" xmlns="http://maven.apache.org/SITE/1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project name="HSLU - oop_maven_template" xmlns="http://maven.apache.org/SITE/1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/SITE/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
     <bannerLeft>
         <name>HSLU Informatik</name>

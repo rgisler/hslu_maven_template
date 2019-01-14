@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2018 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2019 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,20 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
+        <release version="2.1.0" date="2019-01-14" description="Release für OOP/PLAB im 19FS.">
+            <action dev="zbgisler" type="add">
+                Migration auf Java 11.
+            </action>
+            <action dev="zbgisler" type="add">
+                Dependencies und Plugins aktualisiert.
+            </action>
+            <action dev="zbgisler" type="add">
+                JIB-Plugin ergänzt.
+            </action>
+            <action dev="zbgisler" type="add">
+                AsciiDoc-Plugin ergänzt.
+            </action>
+        </release>
         <release version="2.0.0" date="2018-09-15" description="Release für OOP/PLAB im 18HS.">
             <action dev="zbgisler" type="add">
                 Dependencies und Plugins aktualisiert.
