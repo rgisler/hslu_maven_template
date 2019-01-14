@@ -14,7 +14,7 @@ Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur.
 Das Projekt kann einfach kopiert und umbenannt werden. In den meisten 
 IDEs (Eclipse, Netbeans, IntelliJ IDEA etc.) kann es direkt geoeffnet werden, sofern 
 diese in der Lage sind Maven-POMs zu interpretieren.
-**ACHTUNG**: Dieses Template benoetigt mindestens Java 10.0.2! Fuer aeltere Java Versionen nutzen 
+**ACHTUNG**: Dieses Template benoetigt mindestens Java 11! Fuer aeltere Java Versionen nutzen 
 Sie bitte ein Template auf der Basis von Version 1.5.x
 
 Nach dem Kopieren in ein neues Verzeichnis empfehlen wir, den Namen
