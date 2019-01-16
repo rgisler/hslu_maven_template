@@ -90,17 +90,21 @@
 
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
-        <checkstylePlugin.version>3.0.0</checkstylePlugin.version>
+        <mavenCheckstylePlugin.version>3.0.0</mavenCheckstylePlugin.version>
+        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
+        <mavenJavadocPlugin.version>3.0.1</mavenJavadocPlugin.version>
+        <mavenJxrPlugin.version>3.0.0</mavenJxrPlugin.version>
+        <mavenPmdPlugin.version>3.11.0</mavenPmdPlugin.version>
+        <mavenProjectInfoReportsPlugin.version>3.0.0</mavenProjectInfoReportsPlugin.version>
+        <mavenSourcePlugin.version>3.0.1</mavenSourcePlugin.version>
+        <mavenSurefirePlugin.version>3.0.0-M3</mavenSurefirePlugin.version>
+        <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
+
+        <asciidoctorPlugin.version>1.5.7.1</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.2</jacocoPlugin.version>
-        <javadocPlugin.version>3.0.1</javadocPlugin.version>
-        <jxrPlugin.version>2.5</jxrPlugin.version>
-        <pmdPlugin.version>3.11.0</pmdPlugin.version>
-        <sourcePlugin.version>3.0.1</sourcePlugin.version>
-        <surefirePlugin.version>2.22.1</surefirePlugin.version>
-        <surefireReportPlugin.version>${surefirePlugin.version}</surefireReportPlugin.version>
-        <failsafePlugin.version>${surefirePlugin.version}</failsafePlugin.version>
         <spotbugsPlugin.version>3.1.10</spotbugsPlugin.version>
-        <asciidoctor.maven.plugin.version>1.5.7.1</asciidoctor.maven.plugin.version>
+        <versionsPlugin.version>2.7</versionsPlugin.version>
+
         <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
         <asciidoctorj.version>1.6.0</asciidoctorj.version>
 
@@ -221,7 +225,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>${checkstylePlugin.version}</version>
+                    <version>${mavenCheckstylePlugin.version}</version>
                     <dependencies>
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
@@ -251,7 +255,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>${failsafePlugin.version}</version>
+                    <version>${mavenFailsafePlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -271,17 +275,17 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${javadocPlugin.version}</version>
+                    <version>${mavenJavadocPlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jxr-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>${mavenJxrPlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
-                    <version>${pmdPlugin.version}</version>
+                    <version>${mavenPmdPlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -301,12 +305,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${surefirePlugin.version}</version>
+                    <version>${mavenSurefirePlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>${sourcePlugin.version}</version>
+                    <version>${mavenSourcePlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
@@ -321,12 +325,12 @@
                 <plugin>
                     <groupId>org.asciidoctor</groupId>
                     <artifactId>asciidoctor-maven-plugin</artifactId>
-                    <version>${asciidoctor.maven.plugin.version}</version>
+                    <version>${asciidoctorPlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
-                    <version>2.7</version>
+                    <version>${versionsPlugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
@@ -583,7 +587,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${checkstylePlugin.version}</version>
+                <version>${mavenCheckstylePlugin.version}</version>
                 <configuration>
                     <configLocation>${checkstyle.config.location}</configLocation>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -598,7 +602,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>${pmdPlugin.version}</version>
+                <version>${mavenPmdPlugin.version}</version>
                 <configuration>
                     <includeTests>true</includeTests>
                     <linkXRef>true</linkXRef>
@@ -613,17 +617,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
+                <version>${mavenJxrPlugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>${mavenProjectInfoReportsPlugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${javadocPlugin.version}</version>
+                <version>${mavenJavadocPlugin.version}</version>
                 <configuration>
                     <show>package</show>
                     <attach>true</attach>
@@ -633,12 +637,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>${mavenSourcePlugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>${surefireReportPlugin.version}</version>
+                <version>${mavenSurefireReportPlugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -648,7 +652,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.6</version>
+                <version>${versionsPlugin.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>
