@@ -27,7 +27,7 @@
     <description>
         Projekt-Template für Java-Projekte des Moduls OOP. Details siehe unter Beschreibung.
     </description>
-    <url>https://jenkins-global.el.eee.intern/jenkins/job/oop_samples-develop/site/</url>
+    <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}</url>
 
     <organization>
         <name>Hochschule Luzern - Informatik</name>
@@ -61,13 +61,13 @@
     </scm>
 
     <issueManagement>
-        <system>GitLab auf ELab - HSLU I</system>
-        <url>https://intern-gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/issues</url>
+        <system>GitLab Repository auf ELab - HSLU I</system>
+        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/issues</url>
     </issueManagement>
 
     <ciManagement>
-        <system>Jenkins auf ELab - HSLU I</system>
-        <url>https://jenkins-global.el.eee.intern/jenkins/job/${project.artifactId}-develop/</url>
+        <system>GitLab Pipelines auf ELab - HSLU I</system>
+        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/pipelines/</url>
     </ciManagement>
 
     <properties>
