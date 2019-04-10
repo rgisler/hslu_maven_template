@@ -92,7 +92,7 @@
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.0.0</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
-        <mavenJavadocPlugin.version>3.0.1</mavenJavadocPlugin.version>
+        <mavenJavadocPlugin.version>3.1.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.0.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.11.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.0.0</mavenProjectInfoReportsPlugin.version>
@@ -100,7 +100,7 @@
         <mavenSurefirePlugin.version>3.0.0-M3</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
-        <asciidoctorPlugin.version>1.5.7.1</asciidoctorPlugin.version>
+        <asciidoctorPlugin.version>1.6.0</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.3</jacocoPlugin.version>
         <spotbugsPlugin.version>3.1.11</spotbugsPlugin.version>
         <versionsPlugin.version>2.7</versionsPlugin.version>
@@ -316,7 +316,7 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>1.0.1</version>
+                    <version>1.0.2</version>
                 </plugin>
                 <plugin>
                     <groupId>com.github.spotbugs</groupId>
