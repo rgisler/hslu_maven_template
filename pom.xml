@@ -100,13 +100,13 @@
         <mavenSurefirePlugin.version>3.0.0-M3</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
-        <asciidoctorPlugin.version>1.6.0</asciidoctorPlugin.version>
+        <asciidoctorPlugin.version>2.0.0-RC.1</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.3</jacocoPlugin.version>
         <spotbugsPlugin.version>3.1.11</spotbugsPlugin.version>
         <versionsPlugin.version>2.7</versionsPlugin.version>
 
-        <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
-        <asciidoctorj.version>1.6.2</asciidoctorj.version>
+        <asciidoctorj.pdf.version>1.5.0-alpha.18</asciidoctorj.pdf.version>
+        <asciidoctorj.version>2.0.0</asciidoctorj.version>
 
         <log4j2.version>2.11.2</log4j2.version>
         <junit5.version>5.4.2</junit5.version>
