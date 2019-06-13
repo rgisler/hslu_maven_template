@@ -90,19 +90,19 @@
 
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
-        <mavenCheckstylePlugin.version>3.0.0</mavenCheckstylePlugin.version>
+        <mavenCheckstylePlugin.version>3.1.0</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.1.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.0.0</mavenJxrPlugin.version>
-        <mavenPmdPlugin.version>3.11.0</mavenPmdPlugin.version>
+        <mavenPmdPlugin.version>3.12.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.0.0</mavenProjectInfoReportsPlugin.version>
-        <mavenSourcePlugin.version>3.0.1</mavenSourcePlugin.version>
+        <mavenSourcePlugin.version>3.1.0</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.0.0-M3</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.0.0-RC.1</asciidoctorPlugin.version>
-        <jacocoPlugin.version>0.8.3</jacocoPlugin.version>
-        <spotbugsPlugin.version>3.1.11</spotbugsPlugin.version>
+        <jacocoPlugin.version>0.8.4</jacocoPlugin.version>
+        <spotbugsPlugin.version>3.1.12</spotbugsPlugin.version>
         <versionsPlugin.version>2.7</versionsPlugin.version>
 
         <asciidoctorj.pdf.version>1.5.0-alpha.18</asciidoctorj.pdf.version>
@@ -238,7 +238,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>3.8.1</version>
                     <configuration>
                         <release>${project.build.targetJdk}</release>
                     </configuration>
@@ -271,7 +271,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>3.1.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -316,7 +316,7 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>1.1.2</version>
+                    <version>1.3.0</version>
                 </plugin>
                 <plugin>
                     <groupId>com.github.spotbugs</groupId>
