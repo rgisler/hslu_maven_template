@@ -109,7 +109,7 @@
         <asciidoctorj.version>2.1.0</asciidoctorj.version>
 
         <log4j2.version>2.11.2</log4j2.version>
-        <junit5.version>5.4.2</junit5.version>
+        <junit5.version>5.5.1</junit5.version>
     </properties>
 
     <dependencyManagement>
