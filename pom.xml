@@ -108,7 +108,7 @@
         <asciidoctorj.pdf.version>1.5.0-alpha.18</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.1.0</asciidoctorj.version>
 
-        <log4j2.version>2.11.2</log4j2.version>
+        <log4j2.version>2.12.0</log4j2.version>
         <junit5.version>5.5.1</junit5.version>
     </properties>
 
@@ -149,7 +149,7 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.12.2</version>
+                <version>3.13.1</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
