@@ -102,7 +102,7 @@
 
         <asciidoctorPlugin.version>2.0.0-RC.1</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.4</jacocoPlugin.version>
-        <spotbugsPlugin.version>3.1.12.1</spotbugsPlugin.version>
+        <spotbugsPlugin.version>3.1.12.2</spotbugsPlugin.version>
         <versionsPlugin.version>2.7</versionsPlugin.version>
 
         <asciidoctorj.pdf.version>1.5.0-beta.4</asciidoctorj.pdf.version>
@@ -316,7 +316,7 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>1.4.0</version>
+                    <version>1.5.1</version>
                 </plugin>
                 <plugin>
                     <groupId>com.github.spotbugs</groupId>
