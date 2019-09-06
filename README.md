@@ -1,4 +1,4 @@
-# Java Projekt-Template fuer OOP, PLAB, SWE und AD
+# Java Projekt-Template fuer OOP/PLAB, PRG, AD und SWDE
 
 [![build status](https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/badges/develop/build.svg)](https://intern-gitlab.enterpriselab.ch/oop/oop_maven_template/commits/develop)
 [![Quality Gate](http://docker-2017-zbgisler.el.eee.intern:9000/api/badges/gate?key=ch.hslu:oop_maven_template)](http://docker-2017-zbgisler.el.eee.intern:9000/dashboard?id=ch.hslu%3Aoop_maven_template)
@@ -6,7 +6,7 @@
 [![Test Success](http://docker-2017-zbgisler.el.eee.intern:9000/api/badges/measure?key=ch.hslu:oop_maven_template&metric=test_success_density)](http://docker-2017-zbgisler.el.eee.intern:9000/component_measures?id=ch.hslu%3Aoop_maven_template&metric=test_success_density)
 
 ## Zweck
-Dieses Projekt dient in den Modulen OOP/PLAB, AD, SWE, VSK und APPE als Template fuer 
+Dieses Projekt dient in den Modulen OOP/PLAB, PRG, AD, SWDE, VSK und APPE als Template fuer 
 einfache Java-Projekte. Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
 Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur. 
 
