@@ -21,6 +21,22 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
+        <release version="2.2.0" date="2019-09-08" description="Release für OOP/PLAB im 19HS.">
+            <action dev="zbgisler" type="add">
+                Dependencies und Plugins aktualisiert.
+            </action>
+            <action dev="zbgisler" type="add">
+                Site Skin update.
+            </action>
+            <action dev="zbgisler" type="fix">
+                Checkstyle Config korrigiert.
+            </action>
+        </release>
+        <release version="2.1.1" date="2019-02-08" description="Bugfix Release für OOP/PLAB im 19FS.">
+            <action dev="zbgisler" type="add">
+                Dependencies und Plugins aktualisiert.
+            </action>
+        </release>
         <release version="2.1.0" date="2019-01-14" description="Release für OOP/PLAB im 19FS.">
             <action dev="zbgisler" type="add">
                 Migration auf Java 11.
