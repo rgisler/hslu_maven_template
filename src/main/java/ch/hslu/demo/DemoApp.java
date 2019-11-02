@@ -44,6 +44,6 @@ public final class DemoApp {
     public static void main(final String[] args) {
         final Point point = new Point(COR_X, COR_Y);
         final int quadrant = point.getQuadrant();
-        LOGGER.info(point.toString() + " befindet sich in Quadrant: " + quadrant);
+        LOGGER.info("{} befindet sich in Quadrant: {}",point, quadrant);
     }
 }
