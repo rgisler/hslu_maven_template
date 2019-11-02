@@ -559,7 +559,7 @@
 
     <reporting>
         <plugins>
-            <!-- TODO: Uncomment only when using a scm
+            <!-- Uncomment this section when using a scm/vcs.
             <plugin>
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-changelog-plugin</artifactId>
