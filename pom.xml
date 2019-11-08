@@ -96,16 +96,16 @@
         <mavenJxrPlugin.version>3.0.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.12.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.0.0</mavenProjectInfoReportsPlugin.version>
-        <mavenSourcePlugin.version>3.1.0</mavenSourcePlugin.version>
+        <mavenSourcePlugin.version>3.2.0</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.0.0-M3</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.0.0-RC.1</asciidoctorPlugin.version>
-        <jacocoPlugin.version>0.8.4</jacocoPlugin.version>
+        <jacocoPlugin.version>0.8.5</jacocoPlugin.version>
         <spotbugsPlugin.version>3.1.12.2</spotbugsPlugin.version>
         <versionsPlugin.version>2.7</versionsPlugin.version>
 
-        <asciidoctorj.pdf.version>1.5.0-beta.5</asciidoctorj.pdf.version>
+        <asciidoctorj.pdf.version>1.5.0-beta.7</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.1.0</asciidoctorj.version>
 
         <log4j2.version>2.12.1</log4j2.version>
@@ -149,19 +149,19 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.13.2</version>
+                <version>3.14.0</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit-pioneer</groupId>
                 <artifactId>junit-pioneer</artifactId>
-                <version>0.3.0</version>
+                <version>0.3.3</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
-                <version>3.1.9</version>
+                <version>3.1.10</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -211,7 +211,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -226,7 +226,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.24</version>
+                            <version>8.26</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -271,7 +271,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.2</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -316,7 +316,7 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>1.6.1</version>
+                    <version>1.7.0</version>
                 </plugin>
                 <plugin>
                     <groupId>com.github.spotbugs</groupId>
