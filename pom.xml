@@ -97,7 +97,7 @@
         <mavenPmdPlugin.version>3.12.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.0.0</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.2.0</mavenSourcePlugin.version>
-        <mavenSurefirePlugin.version>3.0.0-M3</mavenSurefirePlugin.version>
+        <mavenSurefirePlugin.version>3.0.0-M4</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.0.0-RC.1</asciidoctorPlugin.version>
@@ -105,7 +105,7 @@
         <spotbugsPlugin.version>3.1.12.2</spotbugsPlugin.version>
         <versionsPlugin.version>2.7</versionsPlugin.version>
 
-        <asciidoctorj.pdf.version>1.5.0-beta.7</asciidoctorj.pdf.version>
+        <asciidoctorj.pdf.version>1.5.0-beta.8</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.1.0</asciidoctorj.version>
 
         <log4j2.version>2.12.1</log4j2.version>
@@ -155,7 +155,7 @@
             <dependency>
                 <groupId>org.junit-pioneer</groupId>
                 <artifactId>junit-pioneer</artifactId>
-                <version>0.3.3</version>
+                <version>0.4.2</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -226,7 +226,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.26</version>
+                            <version>8.27</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -256,7 +256,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M2</version>
+                    <version>3.0.0-M3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -316,7 +316,7 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>1.7.0</version>
+                    <version>1.8.0</version>
                 </plugin>
                 <plugin>
                     <groupId>com.github.spotbugs</groupId>
