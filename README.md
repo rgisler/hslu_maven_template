@@ -1,5 +1,7 @@
 # Java Projekt-Template fuer OOP/PLAB, PRG, AD und SWDE
 
+![](https://github.com/rgisler/hslu_maven_template/workflows/Java%20CI/badge.svg)
+
 ## Zweck
 Dieses Projekt dient in den Modulen OOP/PLAB, PRG, AD, SWDE, VSK und APPE als Template fuer 
 einfache Java-Projekte. Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
