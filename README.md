@@ -1,7 +1,7 @@
-# Java Projekt-Template fuer OOP, PLAB, SWE und AD
+# Java Projekt-Template fuer OOP/PLAB, PRG, AD und SWDE
 
 ## Zweck
-Dieses Projekt dient in den Modulen OOP/PLAB, AD, SWE, VSK und APPE als Template fuer 
+Dieses Projekt dient in den Modulen OOP/PLAB, PRG, AD, SWDE, VSK und APPE als Template fuer 
 einfache Java-Projekte. Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
 Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur. 
 

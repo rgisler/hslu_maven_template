@@ -71,33 +71,4 @@
     <rule ref="category/java/multithreading.xml/DoubleCheckedLocking"/>
     <rule ref="category/java/performance.xml/BigIntegerInstantiation"/>
     <rule ref="category/java/performance.xml/BooleanInstantiation"/>
-
-<!-- HINT: https://gitlab.enterpriselab.ch/oop/oop_maven_template/issues/8 -->
-<!--
-    TODO: Ruleset pre 6.0, migration
-    <rule ref="/category/java/basic.xml" />
-    <rule ref="/category/java/braces.xml" />
-    <rule ref="/category/java/clone.xml" />
-    <rule ref="/category/java/codesize.xml" />
-    <rule ref="/category/java/coupling.xml">
-        <exclude name="LawOfDemeter" />
-        <exclude name="LoosePackageCoupling" />
-    </rule>
-    <rule ref="/category/java/design.xml">
-        <exclude name="UseVarargs" />
-    </rule>
-    <rule ref="/category/java/finalizers.xml" />
-    <rule ref="/category/java/imports.xml" />
-    <rule ref="/category/java/naming.xml" />
-    <rule ref="/category/java/optimizations.xml" />
-    <rule ref="/category/java/strings.xml" />
-    <rule ref="/category/java/typeresolution.xml" />
-    <rule ref="/category/java/unusedcode.xml" />
-
-    <rule ref="/category/java/naming.xml/LongVariable">
-        <properties>
-            <property name="minimum" value="30" />
-        </properties>
-    </rule>
--->
 </ruleset>

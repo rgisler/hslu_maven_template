@@ -14,7 +14,7 @@
 # limitations under the License.
 #
  
-image: maven:3.6.0-jdk-11
+image: maven:3.6.2-jdk-11
 
 variables:
   MAVEN_CLI_OPTS: "-s .mvn/settings.xml --batch-mode"
