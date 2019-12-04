@@ -1,7 +1,7 @@
 # Java Projekt-Template fuer OOP/PLAB, PRG, AD und SWDE
 
 ![Java CI](https://github.com/rgisler/hslu_maven_template/workflows/Java%20CI/badge.svg)
-![Dependabot](https://flat.badgen.net/dependabot/rgisler/hslu_maven_template?icon=dependabot)](https://dependabot.com/)
+![Dependabot](https://flat.badgen.net/dependabot/rgisler/hslu_maven_template?icon=dependabot)(https://dependabot.com/)
 
 ## Zweck
 Dieses Projekt dient in den Modulen OOP/PLAB, PRG, AD, SWDE, VSK und APPE als Template fuer 
