@@ -21,7 +21,6 @@ import java.util.Objects;
  * Modell eines Punktes im 2D-Raum.
  * Klasse ist Immutable implementiert.
  */
-@SuppressWarnings("PMD.ShortVariable")
 public final class Point {
 
     /**

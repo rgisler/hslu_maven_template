@@ -27,7 +27,6 @@ import nl.jqno.equalsverifier.EqualsVerifier;
 /**
  * Testfälle für Point.
  */
-@SuppressWarnings("PMD.TooManyMethods")
 final class PointTest {
 
     /**
