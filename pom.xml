@@ -96,7 +96,7 @@
         <mavenJxrPlugin.version>3.0.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.12.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.0.0</mavenProjectInfoReportsPlugin.version>
-        <mavenSourcePlugin.version>3.2.0</mavenSourcePlugin.version>
+        <mavenSourcePlugin.version>3.2.1</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.0.0-M4</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
