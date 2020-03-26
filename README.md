@@ -3,6 +3,8 @@
 [![Java CI](https://github.com/rgisler/hslu_maven_template/workflows/Java%20CI/badge.svg)](https://github.com/rgisler/hslu_maven_template/actions?query=workflow%3A%22Java+CI%22)
 [![Dependabot](https://flat.badgen.net/dependabot/rgisler/hslu_maven_template?icon=dependabot)](https://dependabot.com/)
 
+## Achtung das ist nur eine "Bridge"-Projekt, das Original ist auf HSLU GitLab
+
 ## Zweck
 Dieses Projekt dient in den Modulen OOP/PLAB, PRG, AD, SWDE, VSK und APPE als Template fuer 
 einfache Java-Projekte. Es nutzt einen auf Apache Maven basierenden (und somit IDE-unabhaengigen) 
