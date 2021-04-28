@@ -1,0 +1,23 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  assignees:
+  - rgisler
+  ignore:
+  - dependency-name: com.puppycrawl.tools:checkstyle
+    versions:
+    - "8.39"
+    - 8.41.1
+  - dependency-name: org.openjfx:javafx-fxml
+    versions:
+    - 15.0.1
+    - "16"
+  - dependency-name: org.openjfx:javafx-controls
+    versions:
+    - 15.0.1
+    - "16"
