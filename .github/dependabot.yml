@@ -9,10 +9,6 @@ updates:
   assignees:
   - rgisler
   ignore:
-  - dependency-name: com.puppycrawl.tools:checkstyle
-    versions:
-    - "8.39"
-    - 8.41.1
   - dependency-name: org.openjfx:javafx-fxml
     versions:
     - 15.0.1
