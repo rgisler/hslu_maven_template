@@ -10,3 +10,4 @@
 /.apt_generated_tests/
 /bin/
 *.log
+/dependency-reduced-pom.xml
