@@ -14,7 +14,7 @@
 # limitations under the License.
 #
  
-image: maven:3.6.2-jdk-11
+image: maven:3.8.4-openjdk-17
 
 variables:
   MAVEN_CLI_OPTS: "-s .mvn/settings.xml --batch-mode"
@@ -32,9 +32,9 @@ stages:
 build:
   stage: build
   script:
-    - mvn $MAVEN_CLI_OPTS clean install
+    - mvn $MAVEN_CLI_OPTS clean install $MAVEN_OPTS
 
 site:
   stage: site
   script:
-    - mvn $MAVEN_CLI_OPTS site
+    - mvn $MAVEN_CLI_OPTS site $MAVEN_OPTS
