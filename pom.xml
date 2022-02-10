@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2021 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2022 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -524,6 +524,7 @@
                                 <filter>
                                     <artifact>*:*</artifact>
                                     <excludes>
+                                        <exclude>module-info.class</exclude>
                                         <exclude>META-INF/*.SF</exclude>
                                         <exclude>META-INF/*.DSA</exclude>
                                         <exclude>META-INF/*.RSA</exclude>
@@ -540,7 +541,7 @@
                                 </filter>
                             </filters>                            
                             <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>${jar.start.class}</mainClass>
                                 </transformer>
@@ -608,9 +609,9 @@
                             <sourceHighlighter>coderay</sourceHighlighter>
                             <attributes>
                                 <icons>font</icons>
-                                <pagenums/>
-                                <toc/>
-                                <idprefix/>
+                                <pagenums />
+                                <toc />
+                                <idprefix />
                                 <idseparator>-</idseparator>
                             </attributes>
                         </configuration>
@@ -641,6 +642,13 @@
                         <ruleset>${pmd.config.location}</ruleset>
                     </rulesets>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.ow2.asm</groupId>
+                        <artifactId>asm</artifactId>
+                        <version>9.2</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
@@ -665,7 +673,7 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                     <jlinkImageName>runtime</jlinkImageName>
                     <launcher>guisample</launcher>
                     <mainClass>${jar.start.class}</mainClass>
@@ -752,6 +760,20 @@
                     <attach>true</attach>
                     <additionalJOption>-html5</additionalJOption>
                 </configuration>
+                <reportSets>
+                    <reportSet>
+                        <id>default</id>
+                        <reports>
+                            <report>javadoc</report>
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>            
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
