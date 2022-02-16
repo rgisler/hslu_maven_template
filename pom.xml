@@ -94,7 +94,7 @@
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.3.2</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.1.1</mavenJxrPlugin.version>
-        <mavenPmdPlugin.version>3.15.0</mavenPmdPlugin.version>
+        <mavenPmdPlugin.version>3.16.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.2.1</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.2.1</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.0.0-M5</mavenSurefirePlugin.version>
