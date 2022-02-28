@@ -108,7 +108,7 @@
         <asciidoctorj.pdf.version>1.6.2</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.5.3</asciidoctorj.version>
 
-        <log4j2.version>2.17.1</log4j2.version>
+        <log4j2.version>2.17.2</log4j2.version>
         <junit5.version>5.8.2</junit5.version>
 
         <openjfx.version>17.0.2</openjfx.version>
