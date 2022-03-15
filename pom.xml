@@ -110,6 +110,7 @@
 
         <log4j2.version>2.17.2</log4j2.version>
         <junit5.version>5.8.2</junit5.version>
+        <junit5.plattform.version>1.8.2</junit5.plattform.version>
 
         <openjfx.version>17.0.2</openjfx.version>
     </properties>
@@ -148,15 +149,21 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.junit.platform</groupId>
-                <artifactId>junit-platform-surefire-provider</artifactId>
-                <version>1.3.2</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
                 <version>${junit5.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.platform</groupId>
+                <artifactId>junit-platform-commons</artifactId>
+                <version>${junit5.plattform.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.platform</groupId>
+                <artifactId>junit-platform-surefire-provider</artifactId>
+                <version>${junit5.plattform.version}</version>
                 <scope>test</scope>
             </dependency>
 
