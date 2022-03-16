@@ -112,7 +112,7 @@
         <junit5.version>5.8.2</junit5.version>
         <junit5.plattform.version>1.8.2</junit5.plattform.version>
 
-        <openjfx.version>17.0.2</openjfx.version>
+        <openjfx.version>18</openjfx.version>
     </properties>
 
     <dependencyManagement>
