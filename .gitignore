@@ -11,3 +11,5 @@
 /bin/
 *.log
 /dependency-reduced-pom.xml
+.project
+.classpath
