@@ -101,7 +101,7 @@
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.2.2</asciidoctorPlugin.version>
-        <jacocoPlugin.version>0.8.7</jacocoPlugin.version>
+        <jacocoPlugin.version>0.8.8</jacocoPlugin.version>
         <spotbugsPlugin.version>4.6.0.0</spotbugsPlugin.version>
         <versionsPlugin.version>2.10.0</versionsPlugin.version>
 
