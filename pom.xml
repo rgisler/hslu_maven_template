@@ -97,7 +97,7 @@
         <mavenPmdPlugin.version>3.16.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.3.0</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.2.1</mavenSourcePlugin.version>
-        <mavenSurefirePlugin.version>3.0.0-M6</mavenSurefirePlugin.version>
+        <mavenSurefirePlugin.version>3.0.0-M7</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.2.2</asciidoctorPlugin.version>
