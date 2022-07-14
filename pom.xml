@@ -98,12 +98,12 @@
         <mavenProjectInfoReportsPlugin.version>3.3.0</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.2.1</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.0.0-M6</mavenSurefirePlugin.version>
-        <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
+        <mavenSurefireReportPlugin.version>3.0.0-M7</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.2.2</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.8</jacocoPlugin.version>
         <spotbugsPlugin.version>4.6.0.0</spotbugsPlugin.version>
-        <versionsPlugin.version>2.10.0</versionsPlugin.version>
+        <versionsPlugin.version>2.11.0</versionsPlugin.version>
 
         <asciidoctorj.pdf.version>1.6.2</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.5.3</asciidoctorj.version>
