@@ -108,7 +108,7 @@
         <asciidoctorj.pdf.version>2.3.0</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.5.5</asciidoctorj.version>
 
-        <log4j2.version>2.18.0</log4j2.version>
+        <log4j2.version>2.19.0</log4j2.version>
         <junit5.version>5.9.0</junit5.version>
         <junit5.plattform.version>1.9.0</junit5.plattform.version>
 
