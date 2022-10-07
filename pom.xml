@@ -78,7 +78,10 @@
         <jar.start.class>ch.hslu.demo.DemoApp</jar.start.class>
 
         <scm.group.name>oop</scm.group.name>
-        <scm.developer.uid>zbgisler</scm.developer.uid>
+        <scm.developer.uid>rgisler</scm.developer.uid>
+        <docker.user>${scm.developer.uid}</docker.user>
+        <docker.base.image>amazoncorretto:17.0.4-alpine</docker.base.image>
+        <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>17</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -110,7 +113,7 @@
 
         <log4j2.version>2.19.0</log4j2.version>
         <junit5.version>5.9.1</junit5.version>
-        <junit5.plattform.version>1.9.0</junit5.plattform.version>
+        <junit5.plattform.version>1.9.1</junit5.plattform.version>
 
         <openjfx.version>17.0.2</openjfx.version>
     </properties>
@@ -705,12 +708,24 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <configuration>
+                    <from>
+                        <image>${docker.base.image}</image>
+                    </from>
+                    <to>
+                        <image>${docker.user}/${docker.image}</image>
+                    </to>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
                     <images>
                         <image>
-                            <name>oop-demo</name>
+                            <name>${docker.user}/${docker.image}:%l</name>
                         </image>
                     </images>
                 </configuration>
