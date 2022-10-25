@@ -14,8 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.hslu</groupId>
@@ -115,7 +114,7 @@
         <junit5.version>5.9.1</junit5.version>
         <junit5.plattform.version>1.9.1</junit5.plattform.version>
 
-        <openjfx.version>17.0.2</openjfx.version>
+        <openjfx.version>17.0.4</openjfx.version>
     </properties>
 
     <dependencyManagement>
