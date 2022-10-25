@@ -108,7 +108,7 @@
         <spotbugsPlugin.version>4.7.2.1</spotbugsPlugin.version>
         <versionsPlugin.version>2.13.0</versionsPlugin.version>
 
-        <asciidoctorj.pdf.version>2.3.0</asciidoctorj.pdf.version>
+        <asciidoctorj.pdf.version>2.3.3</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.5.7</asciidoctorj.version>
 
         <log4j2.version>2.19.0</log4j2.version>
