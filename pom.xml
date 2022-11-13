@@ -110,7 +110,10 @@
         <asciidoctorj.pdf.version>2.3.3</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.5.7</asciidoctorj.version>
 
+        <slf4j.version>2.0.3</slf4j.version>
         <log4j2.version>2.19.0</log4j2.version>
+        <logback.version>1.4.4</logback.version>
+
         <junit5.version>5.9.1</junit5.version>
         <junit5.plattform.version>1.9.1</junit5.plattform.version>
 
@@ -119,6 +122,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+                <scope>compile</scope>
+            </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
@@ -131,6 +140,12 @@
                 <version>${log4j2.version}</version>
                 <scope>runtime</scope>
             </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j2-impl</artifactId>
+                <version>${log4j2.version}</version>
+                <scope>runtime</scope>
+            </dependency>            
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
@@ -147,6 +162,12 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit5.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-params</artifactId>
                 <version>${junit5.version}</version>
                 <scope>test</scope>
             </dependency>
@@ -228,6 +249,10 @@
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
         </dependency>
         <dependency>
@@ -245,10 +270,6 @@
         <dependency>
             <groupId>nl.jqno.equalsverifier</groupId>
             <artifactId>equalsverifier</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.github.hakky54</groupId>
-            <artifactId>logcaptor</artifactId>
         </dependency>
     </dependencies>
 
@@ -412,6 +433,11 @@
                     <version>2.8</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
                     <groupId>org.openjfx</groupId>
                     <artifactId>javafx-maven-plugin</artifactId>
                     <version>0.0.8</version>
@@ -421,7 +447,6 @@
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>3.9.1.2184</version>
                 </plugin>
-                
             </plugins>
         </pluginManagement>
         <plugins>
@@ -558,7 +583,7 @@
                                 <filter>
                                     <artifact>*:*</artifact>
                                     <excludes>
-                                        <exclude>module-info.class</exclude>
+                                        <exclude>**/module-info.class</exclude>
                                         <exclude>META-INF/*.SF</exclude>
                                         <exclude>META-INF/*.DSA</exclude>
                                         <exclude>META-INF/*.RSA</exclude>
@@ -736,6 +761,13 @@
                     <release>17</release>
                     <jlinkImageName>runtime</jlinkImageName>
                     <launcher>guisample</launcher>
+                    <mainClass>${jar.start.class}</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
                     <mainClass>${jar.start.class}</mainClass>
                 </configuration>
             </plugin>
