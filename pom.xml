@@ -117,7 +117,7 @@
         <junit5.version>5.9.1</junit5.version>
         <junit5.plattform.version>1.9.1</junit5.plattform.version>
 
-        <openjfx.version>17.0.4</openjfx.version>
+        <openjfx.version>19.0.2</openjfx.version>
     </properties>
 
     <dependencyManagement>
