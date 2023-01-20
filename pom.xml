@@ -93,14 +93,14 @@
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.2.1</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>3.0.0-M8</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.4.1</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.3.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.20.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.4.2</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.2.1</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.0.0-M8</mavenSurefirePlugin.version>
-        <mavenSurefireReportPlugin.version>3.0.0-M8</mavenSurefireReportPlugin.version>
+        <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>2.2.2</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.8</jacocoPlugin.version>
@@ -117,7 +117,7 @@
         <junit5.version>5.9.2</junit5.version>
         <junit5.plattform.version>1.9.1</junit5.plattform.version>
 
-        <openjfx.version>17.0.4</openjfx.version>
+        <openjfx.version>17.0.2</openjfx.version>
     </properties>
 
     <dependencyManagement>
