@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2022 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2023 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -115,7 +115,7 @@
         <logback.version>1.4.4</logback.version>
 
         <junit5.version>5.9.2</junit5.version>
-        <junit5.plattform.version>1.9.1</junit5.plattform.version>
+        <junit5.plattform.version>1.9.2</junit5.plattform.version>
 
         <openjfx.version>17.0.2</openjfx.version>
     </properties>
