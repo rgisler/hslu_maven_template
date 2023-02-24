@@ -79,7 +79,7 @@
         <scm.group.name>oop</scm.group.name>
         <scm.developer.uid>rgisler</scm.developer.uid>
         <docker.user>${scm.developer.uid}</docker.user>
-        <docker.base.image>amazoncorretto:17.0.4-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:17.0.6-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>17</project.build.targetJdk>
@@ -93,7 +93,7 @@
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.2.1</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>3.0.0-M9</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.5.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.3.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.20.0</mavenPmdPlugin.version>
@@ -117,7 +117,7 @@
         <junit5.version>5.9.2</junit5.version>
         <junit5.plattform.version>1.9.2</junit5.plattform.version>
 
-        <openjfx.version>17.0.2</openjfx.version>
+        <openjfx.version>17.0.6</openjfx.version>
     </properties>
 
     <dependencyManagement>
@@ -665,7 +665,6 @@
                         </goals>
                         <configuration>
                             <backend>pdf</backend>
-                            <sourceHighlighter>coderay</sourceHighlighter>
                             <attributes>
                                 <icons>font</icons>
                                 <pagenums />
