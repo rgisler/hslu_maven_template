@@ -14,7 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.hslu</groupId>
@@ -30,7 +31,7 @@
 
     <organization>
         <name>Hochschule Luzern - Informatik</name>
-        <url>http://www.hslu.ch/informatik/</url>
+        <url>https://www.hslu.ch/informatik/</url>
     </organization>
 
     <licenses>
@@ -707,7 +708,7 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <includeTests>true</includeTests>
-                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                    <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
                     <analysisCache>true</analysisCache>
                     <rulesets>
@@ -757,7 +758,6 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <release>17</release>
                     <jlinkImageName>runtime</jlinkImageName>
                     <launcher>guisample</launcher>
                     <mainClass>${jar.start.class}</mainClass>
@@ -824,7 +824,7 @@
                 <configuration>
                     <includeTests>true</includeTests>
                     <linkXRef>true</linkXRef>
-                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                    <inputEncoding >${project.build.sourceEncoding}</inputEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
                     <analysisCache>true</analysisCache>
                     <rulesets>
