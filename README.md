@@ -1,4 +1,4 @@
-# Java Projekt-Template fuer OOP/PLAB, PRG, AD und SWDE
+# Java Projekt-Template fuer OOP/PLAB, AD, VSK, SWDA und DEVOPS
 
 [![Java CI](https://github.com/rgisler/hslu_maven_template/workflows/Java%20CI/badge.svg)](https://github.com/rgisler/hslu_maven_template/actions?query=workflow%3A%22Java+CI%22)
 ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/rgisler/hslu_maven_template)
