@@ -94,7 +94,7 @@
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.3.0</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>3.1.0</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.5.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.3.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.21.0</mavenPmdPlugin.version>
@@ -217,8 +217,8 @@
             </dependency>
             <dependency>
                 <groupId>io.github.hakky54</groupId>
-                <artifactId>logcaptor</artifactId>
-                <version>2.9.0</version>
+                <artifactId>consolecaptor</artifactId>
+                <version>1.0.3</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -271,6 +271,10 @@
         <dependency>
             <groupId>nl.jqno.equalsverifier</groupId>
             <artifactId>equalsverifier</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.hakky54</groupId>
+            <artifactId>consolecaptor</artifactId>
         </dependency>
     </dependencies>
 
@@ -386,7 +390,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.12.1</version>
+                    <version>4.0.0-M8</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
