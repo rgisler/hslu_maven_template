@@ -115,7 +115,7 @@
         <log4j2.version>2.20.0</log4j2.version>
         <logback.version>1.4.4</logback.version>
 
-        <junit5.version>5.9.3</junit5.version>
+        <junit5.version>5.10.0</junit5.version>
         <junit5.plattform.version>1.9.3</junit5.plattform.version>
 
         <openjfx.version>17.0.6</openjfx.version>
