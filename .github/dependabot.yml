@@ -11,9 +11,7 @@ updates:
   ignore:
   - dependency-name: org.openjfx:javafx-fxml
     versions:
-    - 15.0.1
-    - "16"
+    - "17"
   - dependency-name: org.openjfx:javafx-controls
     versions:
-    - 15.0.1
-    - "16"
+    - "17"
