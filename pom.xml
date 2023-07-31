@@ -116,9 +116,9 @@
         <logback.version>1.4.4</logback.version>
 
         <junit5.version>5.10.0</junit5.version>
-        <junit5.plattform.version>1.9.3</junit5.plattform.version>
+        <junit5.plattform.version>1.10.0</junit5.plattform.version>
 
-        <openjfx.version>17.0.6</openjfx.version>
+        <openjfx.version>17.0.7</openjfx.version>
     </properties>
 
     <dependencyManagement>
