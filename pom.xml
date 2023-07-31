@@ -80,7 +80,7 @@
         <scm.group.name>oop</scm.group.name>
         <scm.developer.uid>rgisler</scm.developer.uid>
         <docker.user>${scm.developer.uid}</docker.user>
-        <docker.base.image>amazoncorretto:17.0.6-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:17.0.8-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>17</project.build.targetJdk>
