@@ -27,7 +27,7 @@
     <description>
         Projekt-Template für Java-Projekte an der HSLU. Details siehe unter Beschreibung.
     </description>
-    <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}</url>
+    <url>https://hslu-i1.gitlab.io/oop/${project.artifactId}</url>
 
     <organization>
         <name>Hochschule Luzern - Informatik</name>
@@ -44,8 +44,8 @@
     <developers>
         <developer>
             <id>${scm.developer.uid}</id>
-            <name>Roland Gisler</name>
-            <email>roland.gisler@hslu.ch</email>
+            <name>Name Vorname</name>
+            <email>vorname.name@stud.hslu.ch</email>
             <organization>HSLU Informatik</organization>
             <roles>
                 <role>Developer</role>
@@ -54,20 +54,20 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://${scm.developer.uid}@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:ssh://git@gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}.git</developerConnection>
-        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/tree/develop</url>
+        <connection>scm:git:https://${scm.developer.uid}@gitlab.switch.ch/hslu/${scm.group.name}/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:ssh://git@gitlab.switch.ch/${scm.group.name}/${project.artifactId}.git</developerConnection>
+        <url>https://gitlab.switch.ch/hslu-i1/${scm.group.name}/${project.artifactId}/tree/develop</url>
         <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
         <system>GitLab Repository auf ELab - HSLU I</system>
-        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/issues</url>
+        <url>https://gitlab.switch.ch/${scm.group.name}/${project.artifactId}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>GitLab Pipelines auf ELab - HSLU I</system>
-        <url>https://gitlab.enterpriselab.ch/${scm.group.name}/${project.artifactId}/pipelines/</url>
+        <url>https://gitlab.switch.ch/${scm.group.name}/${project.artifactId}/pipelines/</url>
     </ciManagement>
 
     <properties>
@@ -77,9 +77,11 @@
         <!-- Hier ggf. andere Startklasse anpassen! -->
         <jar.start.class>ch.hslu.demo.DemoApp</jar.start.class>
 
-        <scm.group.name>oop</scm.group.name>
-        <scm.developer.uid>rgisler</scm.developer.uid>
-        <docker.user>${scm.developer.uid}</docker.user>
+        <!-- Folgende Werte für SCM/User/Deployment/Docker anpassen! -->
+        <scm.group.name>hslu/edu/bachelor-computer-science/somewhere</scm.group.name>
+        <scm.developer.uid>zbgisler</scm.developer.uid>
+        <scm.project.id>37888250</scm.project.id>
+        <docker.user>rgisler</docker.user>
         <docker.base.image>amazoncorretto:17.0.8-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
@@ -112,13 +114,13 @@
         <asciidoctorj.version>2.5.10</asciidoctorj.version>
 
         <slf4j.version>2.0.9</slf4j.version>
+        <logback.version>1.4.11</logback.version>
         <log4j2.version>2.20.0</log4j2.version>
-        <logback.version>1.4.4</logback.version>
 
         <junit5.version>5.10.0</junit5.version>
         <junit5.plattform.version>1.10.0</junit5.plattform.version>
 
-        <openjfx.version>17.0.7</openjfx.version>
+        <openjfx.version>21.0.3</openjfx.version>
     </properties>
 
     <dependencyManagement>
@@ -130,10 +132,16 @@
                 <scope>compile</scope>
             </dependency>
             <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
                 <version>${log4j2.version}</version>
-                <scope>compile</scope>
+                <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
@@ -225,6 +233,15 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency> 
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
         <!-- Include for JavaFX-Samples
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -235,14 +252,17 @@
             <artifactId>javafx-fxml</artifactId>
         </dependency>
         -->
+
+        <!--
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
         </dependency>
+        -->
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -282,11 +302,6 @@
         <defaultGoal>install</defaultGoal>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>io.snyk</groupId>
-                    <artifactId>snyk-maven-plugin</artifactId>
-                    <version>2.2.0</version>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
@@ -390,7 +405,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>4.0.0-M9</version>
+                    <version>3.12.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -455,17 +470,6 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            <plugin>
-                <groupId>io.snyk</groupId>
-                <artifactId>snyk-maven-plugin</artifactId>
-                <inherited>false</inherited>
-                <configuration>
-                    <apiToken>${env.SNYK_TOKEN}</apiToken>
-                    <args>
-                        <arg>--all-projects</arg>
-                    </args>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -603,6 +607,24 @@
                                         <exclude>*.xsd</exclude>
                                     </excludes>
                                 </filter>
+                                <filter>
+                                    <artifact>org.slf4j:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*</exclude>
+                                        <exclude>*.dtd</exclude>
+                                        <exclude>*.properties</exclude>
+                                        <exclude>*.xsd</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>ch.qos.logback:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*</exclude>
+                                        <exclude>*.dtd</exclude>
+                                        <exclude>*.properties</exclude>
+                                        <exclude>*.xsd</exclude>
+                                    </excludes>
+                                </filter>
                             </filters>                            
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
@@ -663,6 +685,20 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <id>generate-http-doc</id>
+                        <phase>site</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <attributes>
+                                <icons>font</icons>
+                                <toc>left</toc>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>generate-pdf-doc</id>
                         <phase>site</phase>
                         <goals>
@@ -712,7 +748,6 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <configuration>
                     <includeTests>true</includeTests>
-                    <inputEncoding>${project.build.sourceEncoding}</inputEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
                     <analysisCache>true</analysisCache>
                     <rulesets>
@@ -828,7 +863,6 @@
                 <configuration>
                     <includeTests>true</includeTests>
                     <linkXRef>true</linkXRef>
-                    <inputEncoding >${project.build.sourceEncoding}</inputEncoding>
                     <targetJdk>${project.build.targetJdk}</targetJdk>
                     <analysisCache>true</analysisCache>
                     <rulesets>
@@ -918,11 +952,27 @@
         </plugins>
     </reporting>
 
+    <repositories>
+        <!-- Eigenes Repository bei Bedarf aktivieren (MMP), Zugriffsrechte!
+        <repository>
+            <id>gitlab-maven-repo</id>
+            <url>https://gitlab.com/api/v4/projects/${scm.project.id}/packages/maven</url>
+        </repository>
+        -->        
+    </repositories>
+    
     <distributionManagement>
+        <repository>
+            <id>gitlab-maven-repo</id>
+            <url>https://gitlab.com/api/v4/projects/${scm.project.id}/packages/maven</url>
+        </repository>
+        <snapshotRepository>
+            <id>gitlab-maven-repo</id>
+            <url>https://gitlab.com/api/v4/projects/${scm.project.id}/packages/maven</url>
+        </snapshotRepository>
         <site>
-            <id>oop_maven_template</id>
-            <name>oop_maven_template</name>
-            <url>https://jenkins-global.el.eee.intern/jenkins/job/oop_maven_template-develop/site/</url>
+            <id>gitlab-site</id>
+            <url>https://hslu.pages.switch.ch/edu/bachelor-computer-science/somewhere/${project.artifactId}</url>
         </site>
     </distributionManagement>
 </project>
