@@ -15,15 +15,16 @@
  */
 package ch.hslu.demo;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 
 /**
  * Demo-Applikation für {@link ch.hslu.demo.Point}-Klasse.
  */
 public final class DemoApp {
 
-    private static final Logger LOGGER = LogManager.getLogger(DemoApp.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DemoApp.class);
 
     /** X-Wert. Beispiel. */
     private static final int COR_X = 2;
