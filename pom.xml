@@ -114,7 +114,7 @@
         <asciidoctorj.version>2.5.10</asciidoctorj.version>
 
         <slf4j.version>2.0.9</slf4j.version>
-        <logback.version>1.4.11</logback.version>
+        <logback.version>1.4.12</logback.version>
         <log4j2.version>2.22.0</log4j2.version>
 
         <junit5.version>5.10.1</junit5.version>
