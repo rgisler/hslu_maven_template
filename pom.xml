@@ -61,12 +61,12 @@
     </scm>
 
     <issueManagement>
-        <system>GitLab Repository auf ELab - HSLU I</system>
+        <system>GitLab Repository - HSLU I</system>
         <url>https://gitlab.switch.ch/${scm.group.name}/${project.artifactId}/issues</url>
     </issueManagement>
 
     <ciManagement>
-        <system>GitLab Pipelines auf ELab - HSLU I</system>
+        <system>GitLab Pipelines - HSLU I</system>
         <url>https://gitlab.switch.ch/${scm.group.name}/${project.artifactId}/pipelines/</url>
     </ciManagement>
 
@@ -88,7 +88,7 @@
         <project.build.targetJdk>17</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <project.maven.version>3.3.9</project.maven.version>
+        <project.maven.version>3.6.3</project.maven.version>
 
         <checkstyle.config.location>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config.location>
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
@@ -279,6 +279,12 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.bytebuddy</groupId>
+                    <artifactId>byte-buddy</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.junit-pioneer</groupId>
@@ -402,6 +408,9 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.3.1</version>
+                    <configuration>
+                        <propertiesEncoding>${project.build.sourceEncoding}</propertiesEncoding>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
