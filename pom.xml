@@ -96,7 +96,7 @@
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.3.1</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>3.2.3</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>3.2.5</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.6.3</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.3.2</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.21.2</mavenPmdPlugin.version>
