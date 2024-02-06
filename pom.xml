@@ -113,7 +113,7 @@
         <asciidoctorj.pdf.version>2.3.10</asciidoctorj.pdf.version>
         <asciidoctorj.version>2.5.11</asciidoctorj.version>
 
-        <slf4j.version>2.0.11</slf4j.version>
+        <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.4.14</logback.version>
         <log4j2.version>2.22.1</log4j2.version>
 
