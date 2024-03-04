@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2023 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2024 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -82,10 +82,10 @@
         <scm.developer.uid>zbgisler</scm.developer.uid>
         <scm.project.id>37888250</scm.project.id>
         <docker.user>rgisler</docker.user>
-        <docker.base.image>amazoncorretto:17.0.8-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:21.0.2-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
-        <project.build.targetJdk>17</project.build.targetJdk>
+        <project.build.targetJdk>21</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <project.maven.version>3.6.3</project.maven.version>
@@ -96,7 +96,7 @@
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.3.1</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>3.2.5</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.6.3</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.3.2</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.21.2</mavenPmdPlugin.version>
@@ -115,12 +115,11 @@
 
         <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.5.2</logback.version>
-        <log4j2.version>2.23.0</log4j2.version>
 
         <junit5.version>5.10.2</junit5.version>
-        <junit5.plattform.version>1.10.1</junit5.plattform.version>
+        <junit5.plattform.version>1.10.2</junit5.plattform.version>
 
-        <openjfx.version>21.0.3</openjfx.version>
+        <openjfx.version>21.0.2</openjfx.version>
     </properties>
 
     <dependencyManagement>
@@ -137,24 +136,6 @@
                 <version>${logback.version}</version>
                 <scope>runtime</scope>
             </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>${log4j2.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j2.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j2-impl</artifactId>
-                <version>${log4j2.version}</version>
-                <scope>runtime</scope>
-            </dependency>            
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
@@ -241,29 +222,6 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
         </dependency>
-
-        <!-- Include for JavaFX-Samples
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-        </dependency>
-        -->
-
-        <!--
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j2-impl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-        </dependency>
-        -->
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -279,12 +237,6 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>net.bytebuddy</groupId>
-                    <artifactId>byte-buddy</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.junit-pioneer</groupId>
@@ -761,6 +713,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -780,6 +733,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            -->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
@@ -874,6 +828,7 @@
                     </testSourceDirectories>
                 </configuration>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -888,6 +843,7 @@
                     </rulesets>
                 </configuration>
             </plugin>
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
