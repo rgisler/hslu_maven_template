@@ -111,7 +111,7 @@
         <versionsPlugin.version>2.16.2</versionsPlugin.version>
 
         <asciidoctorj.pdf.version>2.3.13</asciidoctorj.pdf.version>
-        <asciidoctorj.version>2.5.11</asciidoctorj.version>
+        <asciidoctorj.version>2.5.12</asciidoctorj.version>
 
         <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.5.3</logback.version>
