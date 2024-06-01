@@ -97,7 +97,7 @@
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.3.1</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
-        <mavenJavadocPlugin.version>3.6.3</mavenJavadocPlugin.version>
+        <mavenJavadocPlugin.version>3.7.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.3.2</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.22.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.5.0</mavenProjectInfoReportsPlugin.version>
@@ -113,7 +113,7 @@
         <asciidoctorj.version>2.5.13</asciidoctorj.version>
         <asciidoctorj.pdf.version>2.3.15</asciidoctorj.pdf.version>
 
-        <pmd.version>7.1.0</pmd.version>
+        <pmd.version>7.2.0</pmd.version>
 
         <slf4j.version>2.0.13</slf4j.version>
         <logback.version>1.5.6</logback.version>
@@ -391,7 +391,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>3.5.3</version>
+                    <version>3.6.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
