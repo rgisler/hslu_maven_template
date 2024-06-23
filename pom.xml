@@ -95,14 +95,14 @@
 
         <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
-        <mavenCheckstylePlugin.version>3.3.1</mavenCheckstylePlugin.version>
+        <mavenCheckstylePlugin.version>3.4.0</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.7.0</mavenJavadocPlugin.version>
-        <mavenJxrPlugin.version>3.3.2</mavenJxrPlugin.version>
+        <mavenJxrPlugin.version>3.4.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.23.0</mavenPmdPlugin.version>
-        <mavenProjectInfoReportsPlugin.version>3.5.0</mavenProjectInfoReportsPlugin.version>
+        <mavenProjectInfoReportsPlugin.version>3.6.0</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.3.1</mavenSourcePlugin.version>
-        <mavenSurefirePlugin.version>3.2.5</mavenSurefirePlugin.version>
+        <mavenSurefirePlugin.version>3.3.0</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
 
         <asciidoctorPlugin.version>3.0.0</asciidoctorPlugin.version>
@@ -111,7 +111,7 @@
         <versionsPlugin.version>2.16.2</versionsPlugin.version>
 
         <asciidoctorj.version>2.5.13</asciidoctorj.version>
-        <asciidoctorj.pdf.version>2.3.15</asciidoctorj.pdf.version>
+        <asciidoctorj.pdf.version>2.3.17</asciidoctorj.pdf.version>
 
         <pmd.version>7.2.0</pmd.version>
 
@@ -311,7 +311,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.7.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -378,7 +378,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
