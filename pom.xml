@@ -121,7 +121,7 @@
         <junit5.version>5.10.3</junit5.version>
         <junit5.plattform.version>1.10.3</junit5.plattform.version>
 
-        <openjfx.version>21.0.2</openjfx.version>
+        <openjfx.version>22.0.2</openjfx.version>
     </properties>
 
     <dependencyManagement>
