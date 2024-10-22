@@ -109,7 +109,7 @@
 
         <asciidoctorPlugin.version>3.0.0</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.12</jacocoPlugin.version>
-        <spotbugsPlugin.version>4.8.6.4</spotbugsPlugin.version>
+        <spotbugsPlugin.version>4.8.6.5</spotbugsPlugin.version>
         <versionsPlugin.version>2.17.1</versionsPlugin.version>
 
         <asciidoctorj.version>3.0.0</asciidoctorj.version>
