@@ -106,7 +106,7 @@
         <mavenSourcePlugin.version>3.3.1</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.5.2</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
-        <native.maven.plugin.version>0.10.4</native.maven.plugin.version>
+        <native.maven.plugin.version>0.10.5</native.maven.plugin.version>
 
         <asciidoctorPlugin.version>3.1.1</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.12</jacocoPlugin.version>
