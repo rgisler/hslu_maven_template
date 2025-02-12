@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2024 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2025 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -95,7 +95,7 @@
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
         <versions.config.filter>.*(alpha|beta|M|rc|ea).*</versions.config.filter>
 
-        <mavenChangesPlugin.version>2.12.1</mavenChangesPlugin.version>
+        <mavenChangesPlugin.version>3.0.0-M2</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.6.0</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
@@ -124,7 +124,7 @@
         <junit5.version>5.11.4</junit5.version>
         <junit5.plattform.version>1.11.4</junit5.plattform.version>
 
-        <openjfx.version>21.0.5</openjfx.version>
+        <openjfx.version>21.0.6</openjfx.version>
     </properties>
 
     <dependencyManagement>
@@ -854,13 +854,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changes-plugin</artifactId>
                 <version>${mavenChangesPlugin.version}</version>
-                <configuration>
-                    <xmlPath>${basedir}/src/site/changes.xml</xmlPath>
-                </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>
-                            <report>changes-report</report>
+                            <report>changes</report>
                         </reports>
                     </reportSet>
                 </reportSets>
