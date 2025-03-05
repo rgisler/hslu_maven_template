@@ -55,9 +55,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://${scm.developer.uid}@gitlab.switch.ch/hslu/${scm.group.name}/${project.artifactId}.git</connection>
+        <connection>scm:git:https://${scm.developer.uid}@gitlab.switch.ch/${scm.group.name}/${project.artifactId}.git</connection>
         <developerConnection>scm:git:ssh://git@gitlab.switch.ch/${scm.group.name}/${project.artifactId}.git</developerConnection>
-        <url>https://gitlab.switch.ch/hslu-i1/${scm.group.name}/${project.artifactId}/tree/develop</url>
+        <url>https://gitlab.switch.ch/${scm.group.name}/${project.artifactId}/-/tree/develop</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -93,10 +93,10 @@
 
         <checkstyle.config.location>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config.location>
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
-        <versions.config.filter>.*(alpha|beta|M|rc|ea).*</versions.config.filter>
+        <versions.config.filter>.*(alpha|beta|M|rc|RC|ea).*</versions.config.filter>
 
         <mavenChangesPlugin.version>3.0.0-M2</mavenChangesPlugin.version>
-        <mavenChangelogPlugin.version>2.3</mavenChangelogPlugin.version>
+        <mavenChangelogPlugin.version>3.0.0-M1</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.6.0</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.11.2</mavenJavadocPlugin.version>
@@ -438,11 +438,6 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>clirr-maven-plugin</artifactId>
                     <version>2.8</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.cyclonedx</groupId>
-                    <artifactId>cyclonedx-maven-plugin</artifactId>
-                    <version>2.9.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -807,31 +802,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.cyclonedx</groupId>
-                <artifactId>cyclonedx-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>makeAggregateBom</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <projectType>library</projectType>
-                    <includeBomSerialNumber>true</includeBomSerialNumber>
-                    <includeCompileScope>true</includeCompileScope>
-                    <includeProvidedScope>true</includeProvidedScope>
-                    <includeRuntimeScope>true</includeRuntimeScope>
-                    <includeSystemScope>true</includeSystemScope>
-                    <includeTestScope>false</includeTestScope>
-                    <includeLicenseText>false</includeLicenseText>
-                    <outputReactorProjects>true</outputReactorProjects>
-                    <outputFormat>json</outputFormat>
-                    <outputName>CDX-${project.artifactId}-SBOM</outputName>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
             </plugin>
@@ -974,7 +944,7 @@
         <!-- Eigenes Repository bei Bedarf aktivieren (MMP), Zugriffsrechte public!
         <repository>
             <id>gitlab-maven-repo</id>
-            <url>https://gitlab.com/api/v4/projects/${scm.project.id}/packages/maven</url>
+            <url>https://gitlab.switch.com/api/v4/projects/${scm.project.id}/packages/maven</url>
         </repository>
         -->        
     </repositories>
