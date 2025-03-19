@@ -83,7 +83,7 @@
         <scm.developer.uid>zbgisler</scm.developer.uid>
         <scm.project.id>37888250</scm.project.id>
         <docker.user>rgisler</docker.user>
-        <docker.base.image>amazoncorretto:21.0.4-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:21.0.6-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>21</project.build.targetJdk>
@@ -122,9 +122,9 @@
         <logback.version>1.5.18</logback.version>
 
         <junit5.version>5.12.1</junit5.version>
-        <junit5.plattform.version>1.11.4</junit5.plattform.version>
+        <junit5.plattform.version>1.12.1</junit5.plattform.version>
 
-        <openjfx.version>25-ea+8</openjfx.version>
+        <openjfx.version>21.0.6</openjfx.version>
     </properties>
 
     <dependencyManagement>
@@ -192,12 +192,6 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.junit-pioneer</groupId>
-                <artifactId>junit-pioneer</artifactId>
-                <version>2.3.0</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
                 <version>3.19.2</version>
@@ -236,10 +230,6 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.junit-pioneer</groupId>
-            <artifactId>junit-pioneer</artifactId>
         </dependency>
         <dependency>
             <groupId>nl.jqno.equalsverifier</groupId>
