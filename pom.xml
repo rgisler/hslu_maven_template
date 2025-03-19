@@ -121,7 +121,7 @@
         <slf4j.version>2.0.17</slf4j.version>
         <logback.version>1.5.17</logback.version>
 
-        <junit5.version>5.11.4</junit5.version>
+        <junit5.version>5.12.1</junit5.version>
         <junit5.plattform.version>1.11.4</junit5.plattform.version>
 
         <openjfx.version>25-ea+8</openjfx.version>
