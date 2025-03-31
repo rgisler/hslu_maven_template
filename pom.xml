@@ -89,7 +89,7 @@
         <project.build.targetJdk>21</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <project.maven.version>3.8.5</project.maven.version>
+        <project.maven.version>3.8.8</project.maven.version>
 
         <checkstyle.config.location>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config.location>
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
