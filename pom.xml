@@ -92,6 +92,7 @@
         <project.maven.version>3.8.8</project.maven.version>
 
         <checkstyle.config.location>${project.basedir}/config/checkstyle/checkstyle.xml</checkstyle.config.location>
+        <javadoc.doclint.config>-Xdoclint:-missing</javadoc.doclint.config>
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
         <versions.config.filter>.*(alpha|beta|M|rc|RC|ea).*</versions.config.filter>
 
@@ -274,7 +275,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>10.23.0</version>
+                            <version>10.21.4</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -540,6 +541,9 @@
                     <show>package</show>
                     <attach>true</attach>
                     <additionalJOption>-html5</additionalJOption>
+                    <additionalOptions>
+                        <additionalOption>${javadoc.doclint.config}</additionalOption>
+                    </additionalOptions>
                 </configuration>
                 <executions>
                     <execution>
@@ -870,6 +874,9 @@
                     <show>package</show>
                     <attach>true</attach>
                     <additionalJOption>-html5</additionalJOption>
+                    <additionalOptions>
+                        <additionalOption>${javadoc.doclint.config}</additionalOption>
+                    </additionalOptions>
                 </configuration>
                 <reportSets>
                     <reportSet>
