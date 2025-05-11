@@ -83,7 +83,7 @@
         <scm.developer.uid>zbgisler</scm.developer.uid>
         <scm.project.id>37888250</scm.project.id>
         <docker.user>rgisler</docker.user>
-        <docker.base.image>amazoncorretto:21.0.6-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:21.0.7-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>21</project.build.targetJdk>
