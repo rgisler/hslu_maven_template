@@ -96,7 +96,7 @@
         <pmd.config.location>${project.basedir}/config/pmd/pmd_hslu.xml</pmd.config.location>
         <versions.config.filter>.*(alpha|beta|M|rc|RC|ea).*</versions.config.filter>
 
-        <mavenChangesPlugin.version>3.0.0-M2</mavenChangesPlugin.version>
+        <mavenChangesPlugin.version>3.0.0-M3</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>3.0.0-M1</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.6.0</mavenCheckstylePlugin.version>
         <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
