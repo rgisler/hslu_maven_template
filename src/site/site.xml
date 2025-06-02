@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2024 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2025 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@
     <skin>
         <groupId>org.apache.maven.skins</groupId>
         <artifactId>maven-fluido-skin</artifactId>
-        <version>2.0.0-M10</version>
+        <version>2.0.1</version>
     </skin>
     <body>
         <head />
