@@ -122,8 +122,8 @@
         <slf4j.version>2.0.17</slf4j.version>
         <logback.version>1.5.18</logback.version>
 
-        <junit5.version>5.13.2</junit5.version>
-        <junit5.plattform.version>1.13.2</junit5.plattform.version>
+        <junit5.version>5.13.3</junit5.version>
+        <junit5.plattform.version>1.13.3</junit5.plattform.version>
 
         <openjfx.version>21.0.7</openjfx.version>
     </properties>
@@ -183,6 +183,12 @@
                 <groupId>org.junit.platform</groupId>
                 <artifactId>junit-platform-surefire-provider</artifactId>
                 <version>${junit5.plattform.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>1.17.6</version>
                 <scope>test</scope>
             </dependency>
 
