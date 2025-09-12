@@ -83,7 +83,7 @@
         <scm.developer.uid>zbgisler</scm.developer.uid>
         <scm.project.id>37888250</scm.project.id>
         <docker.user>rgisler</docker.user>
-        <docker.base.image>amazoncorretto:21.0.7-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:21.0.8-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>21</project.build.targetJdk>
@@ -125,7 +125,7 @@
         <junit5.version>5.13.4</junit5.version>
         <junit5.plattform.version>1.13.4</junit5.plattform.version>
 
-        <openjfx.version>21.0.7</openjfx.version>
+        <openjfx.version>21.0.8</openjfx.version>
     </properties>
 
     <dependencyManagement>
@@ -141,6 +141,12 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
                 <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jspecify</groupId>
+                <artifactId>jspecify</artifactId>
+                <version>1.0.0</version>
+                <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.openjfx</groupId>
@@ -191,7 +197,6 @@
                 <version>1.17.7</version>
                 <scope>test</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
@@ -221,6 +226,10 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -586,6 +595,12 @@
                                         <exclude>META-INF/*.SF</exclude>
                                         <exclude>META-INF/*.DSA</exclude>
                                         <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>org.jspecify:jspecify</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*</exclude>
                                     </excludes>
                                 </filter>
                                 <filter>
@@ -987,7 +1002,10 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <!-- ... -->
+                            <buildArgs>
+                                <buildArg>--no-fallback</buildArg>
+                                <buildArg>-march=native</buildArg>
+                            </buildArgs>
                         </configuration>
                     </plugin>
                 </plugins>
