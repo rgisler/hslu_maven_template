@@ -83,7 +83,7 @@
         <scm.developer.uid>zbgisler</scm.developer.uid>
         <scm.project.id>37888250</scm.project.id>
         <docker.user>rgisler</docker.user>
-        <docker.base.image>amazoncorretto:21.0.8-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:21-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
         <project.build.targetJdk>21</project.build.targetJdk>
@@ -496,6 +496,17 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>properties</goal>
+                        </goals>
+                    </execution>
+                </executions>                
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
             </plugin>
             <plugin>
@@ -522,6 +533,7 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
+                    <!-- <argLine>@{argLine} -javaagent:${org.mockito:mockito-core:jar}</argLine> -->
                 </configuration>
                 <executions>
                     <execution>
@@ -825,6 +837,7 @@
     <reporting>
         <plugins>
             <!-- Uncomment this section when using a scm/vcs.
+                 Additional: Trouble with git 2.51.0.windows.1, awaiting plugin update.
             <plugin>
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-changelog-plugin</artifactId>

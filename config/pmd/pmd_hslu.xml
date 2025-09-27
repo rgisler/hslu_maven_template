@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-* Copyright 2023 Roland Gisler, HSLU Informatik, Switzerland
+* Copyright 2025 Roland Gisler, HSLU Informatik, Switzerland
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -26,10 +26,11 @@
     <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
     <rule ref="category/java/bestpractices.xml/UnusedPrivateField"/>
     <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod"/>
+    <rule ref="category/java/bestpractices.xml/UseTryWithResources"/>
     <rule ref="category/java/codestyle.xml/EmptyControlStatement"/>
     <rule ref="category/java/codestyle.xml/ExtendsObject"/>
     <rule ref="category/java/codestyle.xml/ForLoopShouldBeWhileLoop"/>
-    <rule ref="category/java/codestyle.xml/TooManyStaticImports"/>
+    <rule ref="category/java/codestyle.xml/UnnecessaryBoxing" />
     <rule ref="category/java/codestyle.xml/UnnecessaryFullyQualifiedName"/>
     <rule ref="category/java/codestyle.xml/UnnecessaryImport" />
     <rule ref="category/java/codestyle.xml/UnnecessaryModifier"/>
@@ -38,6 +39,8 @@
     <rule ref="category/java/codestyle.xml/UselessParentheses"/>
     <rule ref="category/java/codestyle.xml/UselessQualifiedThis"/>
     <rule ref="category/java/design.xml/CollapsibleIfStatements"/>
+    <rule ref="category/java/design.xml/ExcessiveImports" />
+    <rule ref="category/java/design.xml/ExcessiveParameterList"/>
     <rule ref="category/java/design.xml/SimplifiedTernary"/>
     <rule ref="category/java/design.xml/UselessOverridingMethod"/>
     <rule ref="category/java/errorprone.xml/AvoidBranchingStatementAsLastInLoop"/>
@@ -56,9 +59,9 @@
     <rule ref="category/java/errorprone.xml/UnconditionalIfStatement"/>
     <rule ref="category/java/errorprone.xml/UnnecessaryConversionTemporary"/>
     <rule ref="category/java/errorprone.xml/UnusedNullCheckInEquals"/>
-    <rule ref="category/java/errorprone.xml/UselessOperationOnImmutable"/>
     <rule ref="category/java/multithreading.xml/AvoidThreadGroup"/>
     <rule ref="category/java/multithreading.xml/DontCallThreadRun"/>
     <rule ref="category/java/multithreading.xml/DoubleCheckedLocking"/>
     <rule ref="category/java/performance.xml/BigIntegerInstantiation"/>
+    <rule ref="category/java/security.xml/HardCodedCryptoKey" />
 </ruleset>
