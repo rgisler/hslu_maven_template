@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2024 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2025 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,40 @@
         <author email="roland.gisler@hslu.ch">Roland Gisler</author>
     </properties>
     <body>
-        <release version="5.3.0" date="2025-02-07" description="Minor Release für 25FS">
+        <release version="5.7.0" date="pending" description="Minor Release für 25HS/2">
+            <action dev="zbgisler" type="add">
+                Vorbereitung JDK 25 (LTS) migration.
+            </action>
+            <action dev="zbgisler" type="update">
+                JUnit 6 update, Dependencies vereinfacht.
+            </action>
+            <action dev="zbgisler" type="fix">
+                Dependencies und Plugins aktualisiert.
+            </action>
+        </release>
+        <release version="5.6.0" date="2025-09-01" description="Minor Release für 25HS">
+            <action dev="zbgisler" type="add">
+                JSpecify Version 1.0 Dependency ergänzt.
+            </action>
+            <action dev="zbgisler" type="update">
+                Migration auf JUnit 5.13.4
+            </action>
+            <action dev="zbgisler" type="fix">
+                Kollision ByteBuddy-Version aufgelöst.
+            </action>
+            <action dev="zbgisler" type="fix">
+                Dependencies und Plugins aktualisiert.
+            </action>
+        </release>
+        <release version="5.5.0" date="2025-03-12" description="Minor Release für 25FS/2">
+            <action dev="zbgisler" type="update">
+                Migration auf JUnit 5.12.0
+            </action>
+            <action dev="zbgisler" type="fix">
+                Dependencies und Plugins aktualisiert.
+            </action>
+        </release>
+        <release version="5.4.0" date="2025-02-12" description="Minor Release für 25FS">
             <action dev="zbgisler" type="update">
                 Changes Plugin neu konfiguriert, Ablage auf Default geändert.
             </action>
