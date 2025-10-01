@@ -1,0 +1,42 @@
+= Dokumentation Beispiel
+Vorname, Name <vorname.name@hslu.ch>
+V0.0.1, 2025-09-01
+:imagesdir: ./images
+:toc:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 1
+
+== Einführung
+Unsere Empfehlung: Schreiben Sie Ihre Dokumentation als https://asciidoc.org/[AsciiDoc] 
+im Verzeichnis src/docs/asciidoc in *.adoc-Dateien. Dafür gibt es für viele IDEs 
+Editor-Plugins die auch ein Preview/Wysiwyg anbieten.
+Die Dokumentation wird in HTML5 aufbereitet, und steht Ihnen auch als link:index.pdf[PDF] 
+zur Verfügung.
+
+== Kapitel 1: Titel
+Beispiel für ein Kapitel.
+
+== Kapitel 2: tbd
+tbd
+
+== Appendix: Beispiele
+Man kann ganz einfach Bilder integrieren:
+
+image::HSLU-Logo-21-klein.png[HSLU-Logo]
+
+Und wichtige Textstellen mit verschiedenen Levels auszeichnen:
+
+WARNING: Das ist eine Warnung!
+
+TIP: Das ist ein Tipp!
+
+IMPORTANT: Das ist wichtig!
+
+CAUTION: Achtung, das ist gefährlich!
+
+NOTE: Das ist ein kleiner Hinweis.
+
+Und man kann auch zitieren:
+
+[quote,Albert Einstein]
+Ein Mensch der keine Fehler macht, hat nie etwas neues ausprobiert.
