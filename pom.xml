@@ -120,7 +120,7 @@
         <pmd.version>7.17.0</pmd.version>
 
         <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.18</logback.version>
+        <logback.version>1.5.19</logback.version>
 
         <junit5.version>5.13.4</junit5.version>
         <junit5.plattform.version>1.13.4</junit5.plattform.version>
