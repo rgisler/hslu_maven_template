@@ -124,7 +124,7 @@
 
         <junit.version>6.0.0</junit.version>
 
-        <openjfx.version>21.0.8</openjfx.version>
+        <openjfx.version>26-ea+10</openjfx.version>
     </properties>
 
     <dependencyManagement>
