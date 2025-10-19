@@ -110,7 +110,7 @@
         <native.maven.plugin.version>0.11.1</native.maven.plugin.version>
 
         <asciidoctorPlugin.version>3.2.0</asciidoctorPlugin.version>
-        <jacocoPlugin.version>0.8.13</jacocoPlugin.version>
+        <jacocoPlugin.version>0.8.14</jacocoPlugin.version>
         <spotbugsPlugin.version>4.9.6.0</spotbugsPlugin.version>
         <versionsPlugin.version>2.19.1</versionsPlugin.version>
 
