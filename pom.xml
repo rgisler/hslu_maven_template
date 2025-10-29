@@ -115,7 +115,7 @@
         <versionsPlugin.version>2.19.1</versionsPlugin.version>
 
         <asciidoctorj.version>3.0.0</asciidoctorj.version>
-        <asciidoctorj.pdf.version>2.3.21</asciidoctorj.pdf.version>
+        <asciidoctorj.pdf.version>2.3.23</asciidoctorj.pdf.version>
 
         <pmd.version>7.17.0</pmd.version>
 
