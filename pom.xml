@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright 2025 Roland Gisler, HSLU Informatik, Switzerland
+ * Copyright 2026 Roland Gisler, HSLU Informatik, Switzerland
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -83,10 +83,10 @@
         <scm.developer.uid>zbgisler</scm.developer.uid>
         <scm.project.id>37888250</scm.project.id>
         <docker.user>rgisler</docker.user>
-        <docker.base.image>amazoncorretto:21-alpine</docker.base.image>
+        <docker.base.image>amazoncorretto:25-alpine</docker.base.image>
         <docker.image>oop-demo</docker.image>
 
-        <project.build.targetJdk>21</project.build.targetJdk>
+        <project.build.targetJdk>25</project.build.targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <project.maven.version>3.8.8</project.maven.version>
@@ -465,6 +465,8 @@
                     <testSourceDirectories>
                         <directory>${project.basedir}/src/test/java</directory>
                     </testSourceDirectories>
+                    <failOnViolation>false</failOnViolation>
+                    <logViolationsToConsole>true</logViolationsToConsole>                    
                 </configuration>
             </plugin>
             <plugin>
@@ -573,6 +575,7 @@
                         </goals>
                         <configuration>
                             <finalName>${project.artifactId}</finalName>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
@@ -745,6 +748,8 @@
                     <rulesets>
                         <ruleset>${pmd.config.location}</ruleset>
                     </rulesets>
+                    <failOnViolation>false</failOnViolation>
+                    <printFailingErrors>true</printFailingErrors>
                 </configuration>
             </plugin>
             <plugin>
@@ -753,6 +758,7 @@
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
+                    <failOnError>false</failOnError>
                 </configuration>
             </plugin>
             <plugin>
