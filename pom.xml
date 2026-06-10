@@ -99,15 +99,15 @@
         <mavenChangesPlugin.version>3.0.0-M3</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>3.0.0-M1</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.6.0</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>3.5.6</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.12.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.6.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.28.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.9.0</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.4.0</mavenSourcePlugin.version>
-        <mavenSurefirePlugin.version>3.5.5</mavenSurefirePlugin.version>
-        <mavenSurefireReportPlugin.version>3.5.6</mavenSurefireReportPlugin.version>
-        <native.maven.plugin.version>1.1.0</native.maven.plugin.version>
+        <mavenSurefirePlugin.version>3.5.6</mavenSurefirePlugin.version>
+        <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
+        <native.maven.plugin.version>1.1.1</native.maven.plugin.version>
 
         <asciidoctorPlugin.version>3.2.0</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.14</jacocoPlugin.version>
@@ -117,10 +117,10 @@
         <asciidoctorj.version>3.0.1</asciidoctorj.version>
         <asciidoctorj.pdf.version>2.3.23</asciidoctorj.pdf.version>
 
-        <pmd.version>7.24.0</pmd.version>
+        <pmd.version>7.25.0</pmd.version>
 
         <slf4j.version>2.0.18</slf4j.version>
-        <logback.version>1.5.32</logback.version>
+        <logback.version>1.5.33</logback.version>
 
         <junit.version>6.1.0</junit.version>
 
@@ -277,7 +277,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.10.0</version>
+                    <version>3.11.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -362,7 +362,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.21.0</version>
+                    <version>3.22.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -410,7 +410,7 @@
                 <plugin>
                     <groupId>com.github.siom79.japicmp</groupId>
                     <artifactId>japicmp-maven-plugin</artifactId>
-                    <version>0.25.7</version>
+                    <version>0.26.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -425,7 +425,7 @@
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>5.6.0.6792</version>
+                    <version>5.7.0.6970</version>
                 </plugin>
             </plugins>
         </pluginManagement>
