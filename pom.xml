@@ -107,10 +107,8 @@
         <mavenSourcePlugin.version>3.4.0</mavenSourcePlugin.version>
         <mavenSurefirePlugin.version>3.5.6</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
-        <native.maven.plugin.version>1.1.1</native.maven.plugin.version>
-
+        <native.maven.plugin.version>1.1.2</native.maven.plugin.version>
         <asciidoctorPlugin.version>3.2.0</asciidoctorPlugin.version>
-        <jacocoPlugin.version>0.8.14</jacocoPlugin.version>
         <spotbugsPlugin.version>4.10.2.0</spotbugsPlugin.version>
         <versionsPlugin.version>2.21.0</versionsPlugin.version>
 
@@ -120,7 +118,7 @@
         <pmd.version>7.25.0</pmd.version>
 
         <slf4j.version>2.0.18</slf4j.version>
-        <logback.version>1.5.33</logback.version>
+        <logback.version>1.5.34</logback.version>
 
         <junit.version>6.1.0</junit.version>
 
@@ -169,7 +167,7 @@
             <dependency>
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
-                <version>1.18.8</version>
+                <version>1.18.10</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -257,7 +255,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>13.4.2</version>
+                            <version>13.6.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
