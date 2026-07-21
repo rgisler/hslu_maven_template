@@ -14,7 +14,7 @@ Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur.
 Das Projekt kann einfach kopiert und umbenannt werden. In den meisten 
 IDEs (Eclipse, Netbeans, IntelliJ IDEA etc.) kann es direkt geoeffnet werden, sofern 
 diese in der Lage sind Maven-POMs zu interpretieren.
-**ACHTUNG**: Dieses Template benoetigt mindestens Java 17.
+**ACHTUNG**: Dieses Template benoetigt mindestens Java 25.
 
 Nach dem Kopieren in ein neues Verzeichnis empfehlen wir, den Namen
 des Verzeichnisses, den Namen des Projektes in der IDE und die "ArtifactID"
@@ -27,11 +27,8 @@ fuer Demozwecke enthaltenen Demo-Klassen entfernen.
 
 ## Enhaltene Libraries (Dependencies)
 * JUnit 5 - https://junit.org/junit5/
-* JUnit Pioneer - https://junit-pioneer.org/
 * AssertJ - http://joel-costigliola.github.io/assertj/
 * EqualsVerifier - http://jqno.nl/equalsverifier/
-* MutabilityDetector - https://mutabilitydetector.github.io/MutabilityDetector/
-* Logging Framework - http://logging.apache.org/log4j/2.x/
 
 ## Integrierte Analysewerkzeuge
 * Checkstyle - http://checkstyle.sourceforge.net/
