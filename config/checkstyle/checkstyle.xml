@@ -3,7 +3,7 @@
     "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <!--
-   * Copyright 2025 Roland Gisler, HSLU Informatik, Switzerland.
+   * Copyright 2026 Roland Gisler, HSLU Informatik, Switzerland.
    *
    * Licensed under the Apache License, Version 2.0 (the "License");
    * you may not use this file except in compliance with the License.
@@ -61,7 +61,7 @@
       <module name="JavadocVariable">
          <property name="accessModifiers" value="public" />
       </module>
-      <module name="JavadocStyle" />
+      <module name="SummaryJavadoc" />
 
       <!-- Checks for Naming Conventions. -->
       <!-- See http://checkstyle.sf.net/config_naming.html -->
