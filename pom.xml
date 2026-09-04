@@ -105,7 +105,7 @@
         <mavenPmdPlugin.version>3.28.0</mavenPmdPlugin.version>
         <mavenProjectInfoReportsPlugin.version>3.9.0</mavenProjectInfoReportsPlugin.version>
         <mavenSourcePlugin.version>3.4.0</mavenSourcePlugin.version>
-        <mavenSurefirePlugin.version>3.5.6</mavenSurefirePlugin.version>
+        <mavenSurefirePlugin.version>3.6.0</mavenSurefirePlugin.version>
         <mavenSurefireReportPlugin.version>${mavenSurefirePlugin.version}</mavenSurefireReportPlugin.version>
         <native.maven.plugin.version>1.1.11</native.maven.plugin.version>
 
