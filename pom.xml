@@ -99,7 +99,7 @@
         <mavenChangesPlugin.version>3.0.0-M3</mavenChangesPlugin.version>
         <mavenChangelogPlugin.version>3.0.0-M1</mavenChangelogPlugin.version>
         <mavenCheckstylePlugin.version>3.6.0</mavenCheckstylePlugin.version>
-        <mavenFailsafePlugin.version>${mavenSurefirePlugin.version}</mavenFailsafePlugin.version>
+        <mavenFailsafePlugin.version>3.6.0</mavenFailsafePlugin.version>
         <mavenJavadocPlugin.version>3.12.0</mavenJavadocPlugin.version>
         <mavenJxrPlugin.version>3.6.0</mavenJxrPlugin.version>
         <mavenPmdPlugin.version>3.28.0</mavenPmdPlugin.version>
@@ -112,7 +112,7 @@
         <asciidoctorPlugin.version>3.2.0</asciidoctorPlugin.version>
         <jacocoPlugin.version>0.8.15</jacocoPlugin.version>
         <spotbugsPlugin.version>4.10.4.0</spotbugsPlugin.version>
-        <versionsPlugin.version>2.21.0</versionsPlugin.version>
+        <versionsPlugin.version>2.22.0</versionsPlugin.version>
 
         <asciidoctorj.version>3.0.1</asciidoctorj.version>
         <asciidoctorj.pdf.version>2.3.23</asciidoctorj.pdf.version>
@@ -410,7 +410,7 @@
                 <plugin>
                     <groupId>com.github.siom79.japicmp</groupId>
                     <artifactId>japicmp-maven-plugin</artifactId>
-                    <version>0.26.1</version>
+                    <version>0.26.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
